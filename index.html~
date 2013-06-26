@@ -50,19 +50,14 @@
         </section>
 
         <aside id="sidebar">
-          이 다운로드는 겜소스전체를 받습니다.
+          이 다운로드는 소스전체를 받을것입니다.
           <a href="https://github.com/gmlwns5176/Sword-Art-Online/zipball/master" class="button">
             <small>.zip로 다운로드</small>
             다운 시작~
           </a>
-          이 다운로드도 마찬가지로 겜소스 전체.
+          이 다운로드도 마찬가지로 소드 전체.
           <a href="https://github.com/gmlwns5176/Sword-Art-Online/tarball/master" class="button">
             <small>.tar.gz로 다운로드</small>
-            다운 시작~
-          </a>
-          이 다운로드는 페이지 소스 다운함.
-          <a href="https://github.com/gmlwns5176/Sword-Art-Online/zipball/gh-head" class="button">
-            <small>.zip로 다운로드</small>
             다운 시작~
           </a>
 
