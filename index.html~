@@ -68,11 +68,13 @@
         </section>
 
         <aside id="sidebar">
+<p>_____________________________</p>
           이 다운로드는 겜소스전체를 받습니다.
           <a href="https://github.com/gmlwns5176/Sword-Art-Online/zipball/master" class="button">
             <small>.zip로 다운로드</small>
             다운 시작~
           </a>
+<p>_____________________________</p>
           자유게시판 접속
           <a href="FreeBorad.html" class="button">
             <small>Free Board :: 자유게시판</small>
@@ -100,6 +102,8 @@
 
           <p>이페이지는 '<a href="pages.github.com">GitHub Pages</a>'에 의해 호스팅되고 '<a href="https://twitter.com/jasonlong">Jason Long</a>'님이 테마를 만드셨습니다.</p>
         </aside>
+        <p></p>
+        <a href="http://info.flagcounter.com/VpcQ"><img src="http://s06.flagcounter.com/count/VpcQ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
       </div>
     </div>
 
