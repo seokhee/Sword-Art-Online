@@ -21,20 +21,23 @@
       <div class="inner">
         <h1>Sword Art Online</h1>
         <h2>Anime 'Sword Art Online' MMORPG Fan made</h2>
-        <a href="https://github.com/gmlwns5176/Sword-Art-Online" class="button"><small>호스팅 by </small>'GitHub'</a>
+        <a href="https://github.com/gmlwns5176/Sword-Art-Online" class="button"><small>github 프로젝트로</small>'SAO ! ! '</a>
       </div>
     </header>
 
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
+          <a href="http:">
           <p><img src="http://postfiles14.naver.net/20120716_125/blue9954_134244745637323Fje_PNG/saov_logo_gmlrbs389.png?type=w3" alt="소드 아트 온라인 로고"></p>
-
+          </a>
 <h1>
 <a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>안녕하세요! Hello!</h1>
 
 <h2>
 <a name="sword-art-online-mmorpg---" class="anchor" href="#sword-art-online-mmorpg---"><span class="octicon octicon-link"></span></a>Sword Art Online MMORPG 프로젝트에 오신걸 환영합니다.</h2>
+
+<!-- 본문 시작 -->
 
 <p><strong>### 현제 진행 중인 작업 ###</strong></p>
 
@@ -59,6 +62,9 @@
 <blockquote>
 <p>이 프로젝트는 비영리적 프로젝트이며 원작의 심각한 네타들을 포함, 제시 하고있습니다.</p><p>라이센스는 LGPL로 재개시 시 LGPL라이센스로 계시하셔야 됩니다.</p>
 </blockquote>
+
+<!-- 본문 끄읏 -->
+
         </section>
 
         <aside id="sidebar">
@@ -67,10 +73,10 @@
             <small>.zip로 다운로드</small>
             다운 시작~
           </a>
-          이 다운로드도 마찬가지로 겜소스 전체.
-          <a href="https://github.com/gmlwns5176/Sword-Art-Online/tarball/master" class="button">
-            <small>.tar.gz로 다운로드</small>
-            다운 시작~
+          자유게시판 접속
+          <a href="FreeBorad.html" class="button">
+            <small>Free Board :: 자유게시판</small>
+            자유게시판
           </a>
           팬카페 접속
           <a href="http://cafe.naver.com/saoex1515" class="button">
@@ -86,8 +92,8 @@
           <b></b>
           코더씨에게 매일쓰기
           <a href="mail://gmlwns5176@naver.com" class="button">
-            <small>코딩 당담 메일</small>
-            호오~잇!
+            <small>gmlwns5176@naver.com</small>
+            에게 메일쓰기
           </a>
 
           <p class="repo-owner"><a href="https://github.com/gmlwns5176/Sword-Art-Online"></a>프로젝트는 '<a href="https://github.com/gmlwns5176">gmlwns5176</a>'님에의해 진행중.</p>
