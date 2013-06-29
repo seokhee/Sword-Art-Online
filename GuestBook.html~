@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Sword Art Online MMORPG Project Home</title>
+    <title>Sword Art Online MMORPG Project :: Guest Book</title>
   </head>
 
   <body>
@@ -30,43 +30,14 @@
         <section id="main-content">
 
           <p><img src="images/logo.jpg" alt="소드 아트 온라인 로고"></p>
-
-<h1>
-<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>안녕하세요! Hello!</h1>
-
 <h2>
-<a name="sword-art-online-mmorpg---" class="anchor" href="#sword-art-online-mmorpg---"><span class="octicon octicon-link"></span></a>Sword Art Online MMORPG 프로젝트에 오신걸 환영합니다.</h2>
-
+<a name="sword-art-online-mmorpg---" class="anchor" href="#sword-art-online-mmorpg---"><span class="octicon octicon-link"></span></a>Sword Art Online MMORPG :: 방명록</h2>
 <!-- 본문 시작 -->
 
-<p><strong>### 현제 진행 중인 작업 ###</strong></p>
-
-<pre><code>* 캐릭터 모델링
-* 멀티 테스트
-* 1 층 디자인
-* AI 제작.
-</code></pre>
-
-<p><strong>### 스크린샷 ###</strong></p>
-
-<pre><code>* 스크린 샷이 없습니다.</code></pre>
-
-<p><strong>### 참고 자료 & 사이트 ###</strong></p>
-
-<pre><code>* <a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Game_Engine">블렌더 2.6x공식 위키 :: Game Engine</a>
-* <a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Game_Engine">BGUI :: Phython GUI library for the BGE</a>
-* <a href="http://blog.naver.com/PostView.nhn?blogId=passionvirus&logNo=80127609134">표윤석님의 블러그 :: [Blender] 블렌더 시뮬레이션 및 게임과 관련된 튜토리얼 모음</a>
-* <a href="http://edoli.tistory.com/41">에돌이의 얕고 넓은 샘 :: Blender [블렌더] - 오픈소스 3D 그래픽 툴</a>
-</code></pre>
-
-<blockquote>
-<p>이 프로젝트는 비영리적 프로젝트이며 원작의 심각한 네타들을 포함, 제시 하고있습니다.</p><p>라이센스는 LGPL로 재개시 시 LGPL라이센스로 계시하셔야 됩니다.</p>
-</blockquote>
+<iframe src="http://note.blueweb.co.kr/bluecgi/guestbook/guest.php?dbname=gmlwns51760" width="750" height="750" frameborder="0" scrolling="yes"></iframe>
 
 <!-- 본문 끄읏 -->
-
         </section>
-
         <aside id="sidebar">
 <p>_____________________________</p>
           이 다운로드는 겜소스전체를 받습니다.
@@ -74,16 +45,16 @@
             <small>.zip로 다운로드</small>
             다운 시작~
           </a>
-<p>_____________________________</p>
-          자유게시판 접속
+          <p>_____________________________</p>
+          프로젝트홈으로 돌아가기
+          <a href="index.html" class="buttont">
+            <small>프로젝트홈 :: Home</small>
+            홈으로 가기
+          </a>
+          자유게시판으로 돌아가기
           <a href="FreeBorad.html" class="buttont">
             <small>자유게시판 :: Free Board</small>
             자유게시판
-          </a>
-          방명록 접속
-          <a href="GuestBook.html" class="buttont">
-            <small>방명록 :: Guest Book</small>
-            방명록
           </a>
           팬카페 접속
           <a href="http://cafe.naver.com/saoex1515" class="buttony">
@@ -102,14 +73,12 @@
             <small>gmlwns5176@naver.com</small>
             에게 메일쓰기
           </a>
-
           <p class="repo-owner"><a href="https://github.com/gmlwns5176/Sword-Art-Online"></a>프로젝트는 '<a href="https://github.com/gmlwns5176">gmlwns5176</a>'님에의해 진행중.</p>
-
           <p>이페이지는 '<a href="pages.github.com">GitHub Pages</a>'에 의해 호스팅되고 '<a href="https://twitter.com/jasonlong">Jason Long</a>'님이 테마를 만드셨습니다.</p>
-<p></p>
-        <a href="http://info.flagcounter.com/VpcQ"><img src="http://s06.flagcounter.com/count/VpcQ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
+          <p></p>
+          <a href="http://info.flagcounter.com/VpcQ"><img src="http://s06.flagcounter.com/count/VpcQ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
+          <iframe scrolling=no frameborder=0 width=100 height=30 marginwidth=0 marginheight=0 src="http://count-1.blueweb.co.kr/bluecgi/counter/counter7.php?dbname=gmlwns51760"></iframe>
         </aside>
-        
       </div>
     </div>
 

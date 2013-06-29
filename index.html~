@@ -29,7 +29,7 @@
       <div class="inner clearfix">
         <section id="main-content">
 
-          <p><img src="http://postfiles14.naver.net/20120716_125/blue9954_134244745637323Fje_PNG/saov_logo_gmlrbs389.png?type=w3" alt="소드 아트 온라인 로고"></p>
+          <p><img src="images/logo.jpg" alt="소드 아트 온라인 로고"></p>
 
 <h1>
 <a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>안녕하세요! Hello!</h1>
@@ -77,8 +77,13 @@
 <p>_____________________________</p>
           자유게시판 접속
           <a href="FreeBorad.html" class="buttont">
-            <small>Free Board :: 자유게시판</small>
+            <small>자유게시판 :: Free Board</small>
             자유게시판
+          </a>
+          방명록 접속
+          <a href="GuestBook.html" class="buttont">
+            <small>방명록 :: Guest Book</small>
+            방명록
           </a>
           팬카페 접속
           <a href="http://cafe.naver.com/saoex1515" class="buttony">
@@ -93,7 +98,7 @@
           <b></b>
           <b></b>
           코더씨에게 매일쓰기
-          <a href="mail://gmlwns5176@naver.com" class="button">
+          <a href="mail://gmlwns5176@naver.com" class="buttong">
             <small>gmlwns5176@naver.com</small>
             에게 메일쓰기
           </a>
