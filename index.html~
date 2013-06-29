@@ -29,7 +29,7 @@
       <div class="inner clearfix">
         <section id="main-content">
           <a href="http://gmlwns5176.github.io/Sword-Art-Online">
-          <p><img src="images/logo.jpg" alt="소드 아트 온라인 로고"></p></a>
+          <p><img src="images/logo.png" alt="소드 아트 온라인 로고"></p></a>
 
 <h1>
 <a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>안녕하세요! Hello!</h1>
@@ -68,6 +68,9 @@
 <blockquote>
 <p>이 프로젝트는 비영리적 프로젝트이며 원작의 심각한 네타들을 포함, 제시 하고있습니다.</p><p>라이센스는 LGPL로 재개시 시 LGPL라이센스로 계시하셔야 됩니다.</p>
 </blockquote>
+
+<a href="rn.html"><h2>Realese Note!</h2></a>
+
 
 <!-- 본문 끄읏 -->
 
@@ -108,6 +111,17 @@
             <small>gmlwns5176@naver.com</small>
             에게 메일쓰기
           </a>
+	  <script src='http://uchat.co.kr/uchat.php' charset='UTF-8'></script>
+<script type='text/javascript'>
+u_chat({
+room:'saorpg_main'
+, chat_record:true
+, width:'200'
+, height:'400'
+});
+</script>
+
+          
 
           <p class="repo-owner"><a href="https://github.com/gmlwns5176/Sword-Art-Online"></a>프로젝트는 '<a href="https://github.com/gmlwns5176">gmlwns5176</a>'님에의해 진행중.</p>
 

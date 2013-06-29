@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Sword Art Online MMORPG Project :: Release Note</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Sword Art Online</h1>
+        <h2>Anime 'Sword Art Online' MMORPG Fan made</h2>
+        <a href="https://github.com/gmlwns5176/Sword-Art-Online" class="button"><small>github 프로젝트로</small>'SAO ! ! '</a>
+        <a href="FreeBorad.html" class="buttont"><small>Go Back Home</small>메인으로~</a>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+<section id="main-content">
+<!--본문시작-->
+
+<h1>Realese Note</h1>
+<pre><code>
+==3월 하반기 경==
+* 프로젝트 팀 결성
+* 인트로, 로고등 생성.
+
+==4월 9일==
+* 인트로의 첫 빌드
+
+==4월 ~ 5월==
+* 유니티3d엔진으로 SAO 개발
+
+==6월초==
+* 엔진 : 유니티 3D -> BGE
+* 개발 환경 : C# , C++ -> Python, BGE
+* 모델링팀 Run Start.
+* 모델 Character/M0001_Kirito 시작 
+* 모델 Building/Building-1 시작
+
+==6월 21일==
+* googlecode프로젝트 발족
+* 메인 게임파일 시작
+
+==6월 25일 즈음==
+* googlecode프로젝트 사용 난해로 해제.
+* github프로젝트 발족 https://github.com/gmlwns5176/Sword-Art-Online
+
+==6월 27일==
+* 첫 홈피 생성 
+* 홈피 프리셋 -> 한글화 
+* 메인 화면 꾸미기
+
+==6월 28일==
+* 홈패이지 자유 개시판 추가.
+* 홈패이지 버튼 색 다양화 
+* 홈패이지 메인 수정 
+* 홈페이지 로고 깨짐수정
+
+==6월 29일==
+* 홈패이지 방문 카운터 설치
+* 홈패이지 방명록 설치 
+* 홈패이지 Release Note작성
+</pre></code>
+
+<!--본문끄읏-->
+</section>
+      </div>
+    </div>
+  </body>
+</html>
