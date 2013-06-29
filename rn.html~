@@ -22,7 +22,7 @@
         <h1>Sword Art Online</h1>
         <h2>Anime 'Sword Art Online' MMORPG Fan made</h2>
         <a href="https://github.com/gmlwns5176/Sword-Art-Online" class="button"><small>github 프로젝트로</small>'SAO ! ! '</a>
-        <a href="FreeBorad.html" class="buttont"><small>Go Back Home</small>메인으로~</a>
+        <a href="index.html" class="buttont"><small>Go Back Home</small>메인으로~</a>
       </div>
     </header>
     <div id="content-wrapper">
