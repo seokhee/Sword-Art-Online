@@ -51,8 +51,8 @@
             <small>프로젝트홈 :: Home</small>
             홈으로 가기
           </a>
-          프로젝트홈으로 돌아가기
-          <a href="index.html" class="buttont">
+          방명록으로 돌아가기
+          <a href="GuestBook.html" class="buttont">
             <small>방명록 :: Guest Book</small>
             방명록
           </a>
