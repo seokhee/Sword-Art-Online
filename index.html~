@@ -28,7 +28,7 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <a href="http://github.com/gmlwns5176/Sword-Art-Online">
+          <a href="http://gmlwns5176.github.io/Sword-Art-Online">
           <p><img src="images/logo.jpg" alt="소드 아트 온라인 로고"></p></a>
 
 <h1>
@@ -42,10 +42,16 @@
 <p><strong>### 현제 진행 중인 작업 ###</strong></p>
 
 <pre><code>* 캐릭터 모델링
+<code>zlfl</code>
 * 멀티 테스트
 * 1 층 디자인
 * AI 제작.
 </code></pre>
+
+<p><strong>### 일정 ###</strong></p>
+
+<pre><code>7월 5일 12시 까지 프로젝트 보류.
+당일 12시 부터 익일 23시 까지 작업함.</code></pre>
 
 <p><strong>### 스크린샷 ###</strong></p>
 
