@@ -1,0 +1,4 @@
+git add .
+git status
+git commit -m 'autobot'
+git push sao gh-pages
