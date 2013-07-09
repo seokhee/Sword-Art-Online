@@ -1,4 +1,4 @@
 git add .
 git status
-git commit -m 'auto shell script committing~'
+git commit -m 'autobot'
 git push https://github.com/gmlwns5176/Sword-Art-Online
