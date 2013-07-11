@@ -1,8 +1,4 @@
 import sys
-
-# So we can find the bgui module
-sys.path.append('/')
-
 import bgui
 import bge
 import time
