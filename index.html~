@@ -52,11 +52,11 @@
 <pre><code>...공식 일정 無</code></pre>
 
 <p><strong>### 스크린샷 ###</strong></p>
-<code>
+
 <img src="images/shot1.png" alt="스크린샷 1">
 <p> </p>
 <img src="images/shot2.png" alt="스크린샷 2">
-</code>
+
 <p><strong>### 참고 자료 & 사이트 ###</strong></p>
 
 <pre><code>* <a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Game_Engine">블렌더 2.6x공식 위키 :: Game Engine</a>
