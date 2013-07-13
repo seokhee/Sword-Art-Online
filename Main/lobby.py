@@ -69,18 +69,28 @@ class MySys(bgui.System):
 		
 		#init bgui
 		bgui.System.__init__(self)
-
-		#creat next button
-		self.button = bgui.FrameButton(self, 'button', text='|| Connect\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
-		self.button.on_click = self.connectserver
 		
+		#draw connections window
+		self.note = bgui.Frame(self, 'note', border=2, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
+		self.note.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
+		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.48,0.94], options = bgui.BGUI_DEFAULT)
+		
+		#draw chat window
+		self.chat = bgui.Frame(self, 'chat', border=2, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
+		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
+		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.835,0.95], options = bgui.BGUI_DEFAULT)
+		
+		#creat next button
+		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
+		self.button.on_click = self.connectserver
+				
 		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n|| Mode', size=[0.14, 0.12], pos=[0.65, 0.03],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.story
 		
 		#creat HeLooo
 		nick = 'Heathcliff'
-		self.lbl = bgui.Label(self, 'label', text="Hello, sir '"+nick"'.", pos=[0.0,0.9], options = bgui.BGUI_DEFAULT | bgui.BGUI_CENTERX)
-		# Create Key Map
+		self.lbl = bgui.Label(self, 'labl', text="Hello, sir "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 
 	def connectserver(self, widget):
