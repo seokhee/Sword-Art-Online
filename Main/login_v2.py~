@@ -16,8 +16,11 @@ class MySys(bgui.System):
 	A subclass to handle our game specific gui
 	"""
 	def __init__(self):
+		'''
+		Menual
+		
 		# Initialize the system
-		bgui.System.__init__(self, '../../themes/default')
+		bgui.System.__init__(self, '../GUI/BGUI/themes/default')
 		
 		# Use a frame to store all of our widgets
 		self.frame = bgui.Frame(self, 'window', border=0)
@@ -56,7 +59,7 @@ class MySys(bgui.System):
 		self.input.activate()
 		self.input.on_enter_key = self.on_input_enter
 		
-		self.input2 = bgui.TextInput(self.win, 'input2', "I select all when activated.", size=[.4, .04], pos=[.04, 0.08],
+		self.input2 = bgui.TextInput(self.win, 'input2', "I select all when activated.한글", size=[.4, .04], pos=[.04, 0.08],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		
 		# A counter property used for the on_img_click() method
@@ -64,7 +67,10 @@ class MySys(bgui.System):
 		
 		# Create a keymap for keyboard input
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
-
+		'''
+		bgui.System.__init__(self)
+		
+		
 	def on_input_enter(self, widget):
 		self.lbl.text = "You've entered: " + widget.text
 		widget.text = "You've locked this widget."
