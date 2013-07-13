@@ -3,6 +3,7 @@
 #      Editer : Lee Hee Jun @gmlwns5176      #
 ##############################################
 
+# File Name : login.py
 # Edit in UTF-8
 # Tabsize = 4 space.
 
@@ -13,9 +14,6 @@ import bge
 import time
 
 class MySys(bgui.System):
-	"""
-	A subclass to handle our game specific gui
-	"""
 	def __init__(self):
 		'''
 		Menual
