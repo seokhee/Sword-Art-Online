@@ -10,6 +10,7 @@
 import sys
 import bgui
 import bge
+import time
 
 class MySys(bgui.System):
 	"""
@@ -68,24 +69,38 @@ class MySys(bgui.System):
 		# Create a keymap for keyboard input
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 		'''
+		
+		#init bgui
 		bgui.System.__init__(self)
 		
+		#button create
+		self.button = bgui.FrameButton(self, 'btn', text='Link Start!', size=[0.08, 0.07], pos=[0.693, 0.2])
+		self.button.on_click = self.login
 		
-	def on_input_enter(self, widget):
-		self.lbl.text = "You've entered: " + widget.text
-		widget.text = "You've locked this widget."
-		widget.deactivate()
-		widget.frozen = 1
+		#Active lable
+		#id
+		self.input2 = bgui.TextInput(self, 'identity',"ID",size=[0.4, 0.08], pos=[0.225, 0.2],
+			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		#password
+		self.input2 = bgui.TextInput(self, 'password', "Password", size=[0.4, 0.08], pos=[0.45, 0.2],
+			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+			
+		#FPS
+		fps = bge.logic.getAverageFrameRate()
+		fps1 = str(fps)
+		fpss = fps1[0]+fps1[1]+"f/s"
+		self.lbl = bgui.Label(self, 'label', text=fpss,pos=[0.007, 0.96], options = bgui.BGUI_DEFAULT)
 		
-	def on_img_click(self, widget):
-		self.counter += 1
-		self.lbl.text = "You've clicked me %d times" % self.counter
-		self.progress.percent += .1
-		if self.counter % 2 == 1:
-			self.win.img.texco = [(1,0), (0,0), (0,1), (1,1)]
-		else:
-			self.win.img.texco = [(0,0), (1,0), (1,1), (0,1)]
-	
+		# Create Key Map
+		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
+		
+	def login(self, widget):
+		print("login")
+		#self.button = bgui.FrameButton(self, 'btn2', text='Linkdfdfdfdf Start!', size=[0.15, 0.08], pos=[0.8, 0.1])
+		#Change Scene...
+		scene = bge.logic.getCurrentScene()
+		scene.replace('2')
+
 	def main(self):
 		"""A high-level method to be run every frame"""
 		
@@ -125,7 +140,6 @@ class MySys(bgui.System):
 def main(cont):
 	own = cont.owner
 	mouse = bge.logic.mouse
-
 	if 'sys' not in own:
 		# Create our system and show the mouse
 		own['sys'] = MySys()
