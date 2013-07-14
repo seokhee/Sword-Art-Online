@@ -77,7 +77,7 @@ class MySys(bgui.System):
 		
 		#Active lable
 		#id
-		self.input2 = bgui.TextInput(self, 'identity',"ID",size=[0.4, 0.08], pos=[0.225, 0.2],
+		self.input2 = bgui.TextInput(self, 'identity',"ID",size=[0.4, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		#password
 		self.input2 = bgui.TextInput(self, 'password', "Password", size=[0.4, 0.08], pos=[0.45, 0.2],

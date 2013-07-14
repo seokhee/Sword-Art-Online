@@ -76,7 +76,7 @@ class MySys(bgui.System):
 		self.note = bgui.Frame(self, 'note', border=2, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
 		self.note.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
 		
-		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.48,0.94], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.02,0.94], options = bgui.BGUI_DEFAULT)
 		nick = 'Heathcliff'
 		items = [nick]+[]
 		i1 = len(items) - 9
@@ -92,7 +92,7 @@ class MySys(bgui.System):
 		self.chat = bgui.Frame(self, 'chat', border=2, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
 		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
 		
-		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.835,0.95], options = bgui.BGUI_DEFAULT)
+		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.01,0.95], options = bgui.BGUI_DEFAULT)
 				
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
@@ -109,6 +109,8 @@ class MySys(bgui.System):
 
 	def connectserver(self, widget):
 		print('server connect')
+		scene = bge.logic.getCurrentScene()
+		scene.replace('multi')
 
 	def story(self, widget):
 		print('story mode')
