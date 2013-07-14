@@ -13,6 +13,8 @@ import bgui
 import bge
 
 nick = ''
+chat = '''System ::> No Messages.'''
+i = 0
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -104,6 +106,9 @@ class MySys(bgui.System):
 		
 		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[0.9, 0.08], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		
+		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0,0,0,1], size = [0.98, 0.98], pos = [0.02,0])
+		self.chattext.text = chat
 
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
@@ -175,6 +180,5 @@ def main(cont):
 		# Create our system and show the mouse
 		own['sys'] = MySys()
 		mouse.visible = True
-
 	else:
 		own['sys'].main()
