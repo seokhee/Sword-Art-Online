@@ -72,23 +72,16 @@ class MySys(bgui.System):
 		bgui.System.__init__(self)
 		
 		#button create
-		self.button = bgui.FrameButton(self, 'btn', text='Link Start!', size=[0.08, 0.07], pos=[0.693, 0.2])
+		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.07], pos=[0.665, 0.2], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
 		
 		#Active lable
 		#id
-		self.input2 = bgui.TextInput(self, 'identity',"ID",size=[0.4, 0.08], pos=[0.23, 0.2],
-			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		self.input2 = bgui.TextInput(self, 'identity',"ID",pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
+			input_options = bgui.BGUI_INPUT_SELECT_ALL)
 		#password
-		self.input2.color = [0.1,0.1,0.1,1]
-		self.input3 = bgui.TextInput(self, 'password', "Password", size=[0.4, 0.08], pos=[0.45, 0.2],
+		self.input3 = bgui.TextInput(self, 'password', "Password", size=[0.21, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
-			
-		#FPS
-		fps = bge.logic.getAverageFrameRate()
-		fps1 = str(fps)
-		fpss = fps1[0]+fps1[1]+"f/s"
-		self.lbl = bgui.Label(self, 'label', text=fpss,pos=[0.007, 0.96], options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
