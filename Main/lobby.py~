@@ -12,6 +12,8 @@ import sys
 import bgui
 import bge
 
+nick = ''
+
 class MySys(bgui.System):
 	def __init__(self):
 		'''
@@ -73,13 +75,25 @@ class MySys(bgui.System):
 		#draw connections window
 		self.note = bgui.Frame(self, 'note', border=2, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
 		self.note.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
+		
 		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.48,0.94], options = bgui.BGUI_DEFAULT)
+		nick = 'Heathcliff'
+		items = [nick]+[]
+		i1 = len(items) - 9
+		if i1 < 1:
+			i1 = 0
+		item = items[0:8] + ['... And '+str(i1)+' players.']
+		self.listf = bgui.Frame(self.note, 'notef', border=1, size=[0.9, 0.85], pos=[0.05, 0.05], options=bgui.BGUI_DEFAULT)
+		self.listf.colors = [[0.5, 0.5, 0.5, 0.3]] * 4
+		
+		self.lb = bgui.ListBox(self.listf, "lb", items=item, padding=0.05, size=[0.9, 0.9], pos=[0.05, 0.05])
 		
 		#draw chat window
 		self.chat = bgui.Frame(self, 'chat', border=2, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
 		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
-		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.833,0.95], options = bgui.BGUI_DEFAULT)
 		
+		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.835,0.95], options = bgui.BGUI_DEFAULT)
+				
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.connectserver
@@ -88,8 +102,8 @@ class MySys(bgui.System):
 		self.button.on_click = self.story
 		
 		#creat HeLooo
-		nick = 'Heathcliff'
 		self.lbl = bgui.Label(self, 'labl', text="Hello, sir "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 
