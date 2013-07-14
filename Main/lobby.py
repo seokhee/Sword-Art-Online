@@ -93,7 +93,18 @@ class MySys(bgui.System):
 		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
 		
 		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.01,0.95], options = bgui.BGUI_DEFAULT)
-				
+		
+		self.listc = bgui.Frame(self.chat, 'notec', border=1, size=[0.98, 0.83], pos=[0.01, 0.1], options=bgui.BGUI_DEFAULT)
+		self.listc.colors = [[0.5, 0.5, 0.5, 0.3]] * 4
+		
+		self.buttons = bgui.FrameButton(self.chat, 'buttons', text='Send', size=[0.1, 0.08], pos=[0.89, 0.01],options = bgui.BGUI_DEFAULT)
+		self.buttons.on_click = self.sendmessage
+		
+		self.lblat = bgui.Label(self.chat, 'lblat', text=">", pos=[0.01,0.04], options = bgui.BGUI_DEFAULT)
+		
+		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[0.9, 0.08], pos=[0.03, 0.01],
+			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.connectserver
@@ -116,6 +127,10 @@ class MySys(bgui.System):
 		print('story mode')
 		scene = bge.logic.getCurrentScene()
 		scene.replace('story')
+	
+	def sendmessage(self, widget):
+		print('send message')
+		self.input2.text = ''
 
 	def main(self):
 		"""A high-level method to be run every frame"""
