@@ -80,7 +80,8 @@ class MySys(bgui.System):
 		self.input2 = bgui.TextInput(self, 'identity',"ID",size=[0.4, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		#password
-		self.input2 = bgui.TextInput(self, 'password', "Password", size=[0.4, 0.08], pos=[0.45, 0.2],
+		self.input2.color = [0.1,0.1,0.1,1]
+		self.input3 = bgui.TextInput(self, 'password', "Password", size=[0.4, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 			
 		#FPS
