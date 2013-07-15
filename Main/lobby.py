@@ -104,7 +104,7 @@ class MySys(bgui.System):
 		
 		self.lblat = bgui.Label(self.chat, 'lblat', text=">", pos=[0.01,0.04], options = bgui.BGUI_DEFAULT)
 		
-		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[0.9, 0.08], pos=[0.03, 0.01],
+		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[1, 0.08], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		
 		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0,0,0,1], size = [0.98, 0.98], pos = [0.02,0])
@@ -118,7 +118,7 @@ class MySys(bgui.System):
 		self.button.on_click = self.story
 		
 		#creat HeLooo
-		self.lbl = bgui.Label(self, 'labl', text="Hello, sir "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self, 'labl', text="Hello, "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}

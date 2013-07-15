@@ -118,7 +118,7 @@ class MySys(bgui.System):
 		self.button.on_click = self.story
 		
 		#creat HeLooo
-		self.lbl = bgui.Label(self, 'labl', text="Hello, sir "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self, 'labl', text="Hello, "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
