@@ -72,7 +72,7 @@ class MySys(bgui.System):
 		bgui.System.__init__(self)
 		
 		#button create
-		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.07], pos=[0.665, 0.2], options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.2], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
 		
 		#Active lable
