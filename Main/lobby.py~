@@ -104,7 +104,7 @@ class MySys(bgui.System):
 		
 		self.lblat = bgui.Label(self.chat, 'lblat', text=">", pos=[0.01,0.04], options = bgui.BGUI_DEFAULT)
 		
-		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[0.9, 0.08], pos=[0.03, 0.01],
+		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[1, 0.08], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		
 		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0,0,0,1], size = [0.98, 0.98], pos = [0.02,0])
@@ -137,6 +137,9 @@ class MySys(bgui.System):
 		print('send message')
 		self.input2.text = ''
 
+	def nickname(self, widget):
+		file1 = open('./.sao/id.idi','r')
+		return file1.readlines()
 	def main(self):
 		"""A high-level method to be run every frame"""
 		

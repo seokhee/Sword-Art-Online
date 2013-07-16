@@ -118,7 +118,7 @@ class MySys(bgui.System):
 		self.button.on_click = self.story
 		
 		#creat HeLooo
-		self.lbl = bgui.Label(self, 'labl', text="Hello, "+nick+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self, 'labl', text="Hello, "+nickname()+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -137,6 +137,9 @@ class MySys(bgui.System):
 		print('send message')
 		self.input2.text = ''
 
+	def nickname(self, widget):
+		file1 = open('./.sao/id.idi','r')
+		return file1.readlines()
 	def main(self):
 		"""A high-level method to be run every frame"""
 		

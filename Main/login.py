@@ -12,6 +12,7 @@ import sys
 import bgui
 import bge
 import time
+import os
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -90,8 +91,21 @@ class MySys(bgui.System):
 		print("login")
 		#self.button = bgui.FrameButton(self, 'btn2', text='Linkdfdfdfdf Start!', size=[0.15, 0.08], pos=[0.8, 0.1])
 		#Change Scene...
-		scene = bge.logic.getCurrentScene()
-		scene.replace('2')
+		try:
+			dirname = './.sao'
+			if not os.path.isdir('./.sao'):
+				os.mkdir('./.sao')
+			file1 = open('./.sao/id.idi','w')
+			file1.write(self.input2.text)
+			file1.close()
+			file2 = open('./.sao/pass.idi', 'w')
+			file2 = write(self.input3.text)
+			file2.close()
+			scene = bge.logic.getCurrentScene()
+			scene.replace('2')
+		except:
+			scene = bge.logic.getCurrentScene()
+			scene.replace('error')
 
 	def main(self):
 		"""A high-level method to be run every frame"""
