@@ -96,7 +96,7 @@ class MySys(bgui.System):
 			if not os.path.isdir('./.sao'):
 				os.mkdir('./.sao')
 			file1 = open('./.sao/id.idi','w')
-			file1.write(self.input2.text + "\n" + self.input3.text)
+			file1.write(self.input2.text)
 			file1.close()
 			scene = bge.logic.getCurrentScene()
 			scene.replace('2')

@@ -99,7 +99,7 @@ class MySys(bgui.System):
 			file1.write(self.input2.text)
 			file1.close()
 			file2 = open('./.sao/pass.idi', 'w')
-			file2 = write(self.input3.text)
+			file2.write(self.input3.text)
 			file2.close()
 			scene = bge.logic.getCurrentScene()
 			scene.replace('2')

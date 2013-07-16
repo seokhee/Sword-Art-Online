@@ -11,6 +11,7 @@
 import sys
 import bgui
 import bge
+import os
 
 nick = ''
 chat = '''System ::> No Messages.'''
@@ -79,7 +80,6 @@ class MySys(bgui.System):
 		self.note.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
 		
 		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.02,0.94], options = bgui.BGUI_DEFAULT)
-		nick = 'Heathcliff'
 		items = [nick]+[]
 		i1 = len(items) - 9
 		if i1 < 1:
@@ -94,18 +94,23 @@ class MySys(bgui.System):
 		self.chat = bgui.Frame(self, 'chat', border=2, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
 		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
 		
-		self.lblchat = bgui.Label(self.chat, 'lblchat', text="◊ Lobby ◊", pos=[0.01,0.95], options = bgui.BGUI_DEFAULT)
+		self.head = bgui.Image(self.chat, 'img', '../GUI/window-haed.png', size = [1,0.07], pos = [0,0.93])
+		self.foot = bgui.Image(self.chat, 'im', '../GUI/window-foot.png', size = [1, 0.06], pos = [0,0])
 		
-		self.listc = bgui.Frame(self.chat, 'notec', border=1, size=[0.98, 0.83], pos=[0.01, 0.1], options=bgui.BGUI_DEFAULT)
+		self.lblchat = bgui.Label(self.head, 'lblchat', text="◊ Lobby ◊", pos=[0.01,0.95], options = bgui.BGUI_DEFAULT)
+		
+		self.listc = bgui.Frame(self.chat, 'notec', border=1, size=[1, 0.87], pos=[0.0, 0.06], options=bgui.BGUI_DEFAULT)
 		self.listc.colors = [[0.5, 0.5, 0.5, 0.3]] * 4
 		
-		self.buttons = bgui.FrameButton(self.chat, 'buttons', text='Send', size=[0.1, 0.08], pos=[0.89, 0.01],options = bgui.BGUI_DEFAULT)
+		self.buttons = bgui.FrameButton(self.foot, 'buttons', text='Send',pt_size = 20, size=[0.085, 0.8], pos=[0.91, 0.1],options = bgui.BGUI_DEFAULT)
 		self.buttons.on_click = self.sendmessage
 		
-		self.lblat = bgui.Label(self.chat, 'lblat', text=">", pos=[0.01,0.04], options = bgui.BGUI_DEFAULT)
+		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.2], options = bgui.BGUI_DEFAULT)
+		self.lblat.color = [0,0,0,1]
 		
-		self.input2 = bgui.TextInput(self.chat, 'input2', "", size=[1, 0.08], pos=[0.03, 0.01],
+		self.input2 = bgui.TextInput(self.foot, 'input2', "",pt_size = 25, size=[1, 0.95], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		self.input2.color = [0,0,0,1]
 		
 		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0,0,0,1], size = [0.98, 0.98], pos = [0.02,0])
 		self.chattext.text = chat
@@ -118,7 +123,12 @@ class MySys(bgui.System):
 		self.button.on_click = self.story
 		
 		#creat HeLooo
-		self.lbl = bgui.Label(self, 'labl', text="Hello, "+nickname()+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		
+		file1 = open('./.sao/id.idi','r')
+		data = file1.readlines()
+		file1.close()
+		
+		self.lbl = bgui.Label(self, 'labl', text="Hello, "+str(data[0])+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -137,9 +147,6 @@ class MySys(bgui.System):
 		print('send message')
 		self.input2.text = ''
 
-	def nickname(self, widget):
-		file1 = open('./.sao/id.idi','r')
-		return file1.readlines()
 	def main(self):
 		"""A high-level method to be run every frame"""
 		
@@ -179,6 +186,7 @@ class MySys(bgui.System):
 def main(cont):
 	own = cont.owner
 	mouse = bge.logic.mouse
+	
 	if 'sys' not in own:
 		# Create our system and show the mouse
 		own['sys'] = MySys()
