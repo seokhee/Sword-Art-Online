@@ -76,43 +76,48 @@ class MySys(bgui.System):
 		bgui.System.__init__(self)
 		
 		#draw connections window
-		self.note = bgui.Frame(self, 'note', border=2, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
-		self.note.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
+		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
+		self.note.colors = [[0.5, 0.5, 0.5, 0]] * 4
 		
-		self.lbl = bgui.Label(self.note, 'lblconnect', text="◊ Connections ◊", pos=[0.02,0.94], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self.note, 'lblconnect', text="|-| Connections |-|", pos=[0.02,0.94], options = bgui.BGUI_DEFAULT)
 		items = [nick]+[]
 		i1 = len(items) - 9
 		if i1 < 1:
 			i1 = 'no more'
 		item = items[0:8] + ['... And '+str(i1)+' players.']
-		self.listf = bgui.Frame(self.note, 'notef', border=1, size=[0.9, 0.85], pos=[0.05, 0.05], options=bgui.BGUI_DEFAULT)
-		self.listf.colors = [[0.5, 0.5, 0.5, 0.3]] * 4
+		self.listf = bgui.Frame(self.note, 'notef', border=0, size=[0.9, 0.85], pos=[0.05, 0.05], options=bgui.BGUI_DEFAULT)
+		self.listf.colors = [[0.5, 0.5, 0.5, 0]] * 4
 		
 		self.lb = bgui.ListBox(self.listf, "lb", items=item, padding=0.05, size=[0.9, 0.9], pos=[0.05, 0.05])
 		
 		#draw chat window
-		self.chat = bgui.Frame(self, 'chat', border=2, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
-		self.chat.colors = [[0.8, 0.5, 0.8, 0.6]] * 4
+		self.chat = bgui.Frame(self, 'chat', border=0, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
+		self.chat.colors = [[0.8, 0.5, 0.8, 0]] * 4
 		
-		self.head = bgui.Image(self.chat, 'img', '../GUI/window-haed.png', size = [1,0.07], pos = [0,0.93])
-		self.foot = bgui.Image(self.chat, 'im', '../GUI/window-foot.png', size = [1, 0.06], pos = [0,0])
+		self.head = bgui.Frame(self.chat, 'img', size = [1,0.07], pos = [0,0.93])
+		self.foot = bgui.Frame(self.chat, 'im', size = [1, 0.06], pos = [0,0])
+		self.foot.colors=[[0,0,0,1]]*4
 		
-		self.lblchat = bgui.Label(self.head, 'lblchat', text="◊ Lobby ◊", pos=[0.01,0.95], options = bgui.BGUI_DEFAULT)
+		self.lblchat = bgui.Label(self.head, 'lblchat', text="|-| Lobby |-|", pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
+		self.lblchat.color = [0,0,0,1]
 		
-		self.listc = bgui.Frame(self.chat, 'notec', border=1, size=[1, 0.87], pos=[0.0, 0.06], options=bgui.BGUI_DEFAULT)
-		self.listc.colors = [[0.5, 0.5, 0.5, 0.3]] * 4
+		self.listc = bgui.Frame(self.chat, 'notec', border=0, size=[1, 0.87], pos=[0.0, 0.06], options=bgui.BGUI_DEFAULT)
+		self.listc.colors = [[0.5, 0.5, 0.5, 0]] * 4
 		
-		self.buttons = bgui.FrameButton(self.foot, 'buttons', text='Send',pt_size = 20, size=[0.09, 0.8], pos=[0.91, 0.1],options = bgui.BGUI_DEFAULT)
+		self.temps = bgui.Frame(self.foot, 'dd', border=0, size=[0.95,0.85], pos=[0.02, 0.1],options = bgui.BGUI_DEFAULT)
+		self.listc.colors = [[0.5,0.5,0.5,1]] * 4
+		
+		self.buttons = bgui.FrameButton(self.foot, 'buttons', text='Send',pt_size = 20, size=[0.085, 0.8], pos=[0.91, 0.1],options = bgui.BGUI_DEFAULT)
 		self.buttons.on_click = self.sendmessage
 		
-		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.2], options = bgui.BGUI_DEFAULT)
+		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblat.color = [0,0,0,1]
 		
 		self.input2 = bgui.TextInput(self.foot, 'input2', "",pt_size = 25, size=[1, 0.95], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
-		self.input2.color = [0,0,0,1]
+		self.input2.color = [[0.5,0.5,0.5,1]]*4
 		
-		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0,0,0,1], size = [0.98, 0.98], pos = [0.02,0])
+		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0.1,1,0.1,1], size = [0.98, 0.98], pos = [0.02,0])
 		self.chattext.text = chat
 
 		#creat next button
