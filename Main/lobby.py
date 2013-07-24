@@ -13,12 +13,16 @@ import bgui
 import bge
 import os
 import socket
+import log
+import socket
 
 nick = ''
 chat = '''_________________System ::> Connect to server_________________'''
 i = 0
 host = '59.14.14.2'
-port = 2000
+port = 10010
+clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+clis.connect((host,port))
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -78,6 +82,7 @@ class MySys(bgui.System):
 		
 		#init bgui
 		bgui.System.__init__(self)
+		log.log('init')
 		
 		#draw connections window
 		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
@@ -153,8 +158,9 @@ class MySys(bgui.System):
 	
 	def sendmessage(self, widget):
 		print('send message')
+		clis.send(self.input2.text)
 		self.input2.text = ''
-	
+			
 	def con2ser(self, widget):
 		print('link start')
 	
@@ -200,11 +206,12 @@ class MySys(bgui.System):
 def main(cont):
 	own = cont.owner
 	mouse = bge.logic.mouse
-	
-	
 	if 'sys' not in own:
 		# Create our system and show the mouse
 		own['sys'] = MySys()
 		mouse.visible = True
+		log.log('add Mysys()')
 	else:
 		own['sys'].main()
+
+clis.close()

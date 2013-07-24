@@ -13,6 +13,7 @@ import bgui
 import bge
 import time
 import os
+import log
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -71,6 +72,7 @@ class MySys(bgui.System):
 		
 		#init bgui
 		bgui.System.__init__(self)
+		log.log('start game')
 		
 		#button create
 		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
@@ -92,17 +94,26 @@ class MySys(bgui.System):
 		#self.button = bgui.FrameButton(self, 'btn2', text='Linkdfdfdfdf Start!', size=[0.15, 0.08], pos=[0.8, 0.1])
 		#Change Scene...
 		try:
+			log.log('cheak .sao folder')
 			dirname = './.sao'
 			if not os.path.isdir('./.sao'):
 				os.mkdir('./.sao')
+				log.log('''mkdir ".sao" ''')
+			log.log('start write id')
 			file1 = open('./.sao/id.idi','w')
 			file1.write(self.input2.text)
 			file1.close()
+			log.log('start write pass')
+			file2 = open('./.sao/pass.idi', 'w')
+			file2.write(self.input3.text)
+			file2.close()
 			scene = bge.logic.getCurrentScene()
 			scene.replace('2')
+			log.log('go login scene')
 		except:
 			scene = bge.logic.getCurrentScene()
 			scene.replace('error')
+			log.log('Error on login')
 
 	def main(self):
 		"""A high-level method to be run every frame"""
