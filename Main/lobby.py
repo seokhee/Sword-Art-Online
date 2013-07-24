@@ -23,6 +23,7 @@ host = '59.14.14.2'
 port = 10010
 clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clis.connect((host,port))
+clis.settimeout(1)
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -158,7 +159,7 @@ class MySys(bgui.System):
 	
 	def sendmessage(self, widget):
 		print('send message')
-		clis.send(self.input2.text)
+		clis.send(bytes(self.input2.text,'utf-8'))
 		self.input2.text = ''
 			
 	def con2ser(self, widget):
@@ -214,4 +215,4 @@ def main(cont):
 	else:
 		own['sys'].main()
 
-clis.close()
+
