@@ -159,7 +159,8 @@ class MySys(bgui.System):
 	
 	def sendmessage(self, widget):
 		print('send message')
-		clis.send(bytes(self.input2.text,'utf-8'))
+		clis.sendall(bytes(self.input2.text,'utf-8'))
+		data = clis.recv(1024)
 		self.input2.text = ''
 			
 	def con2ser(self, widget):
