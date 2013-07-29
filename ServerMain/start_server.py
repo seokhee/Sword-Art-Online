@@ -10,12 +10,12 @@
 import sys
 import os
 import socket
-import threading
 from log import *
 import time
+from threading import Thread
 
 start_time = time.time()
-version = 'v0.0.1.094'
+version = 'v0.0.1.135'
 
 print('''
 ##############################################
@@ -27,13 +27,14 @@ log('Server Version : ' + version)
 
 # Server Program
            
-PORT = 10010
-HOST = '59.14.14.2'
+PORT = 10135
+HOST = '127.0.0.1'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((HOST,PORT))
 log('server is running on '+HOST+':'+str(PORT))
 sock.listen(1000)
+sock.settimeout(100)
 
 while True:
 	(conn, addr) = sock.accept()
@@ -43,7 +44,6 @@ while True:
 	log(text)
 	conn.close()
 
-conn.close()
 # End Server Program
 
 end_time1 = time.time()

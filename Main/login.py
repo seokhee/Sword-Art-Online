@@ -108,7 +108,7 @@ class MySys(bgui.System):
 			file2.write(self.input3.text)
 			file2.close()
 			scene = bge.logic.getCurrentScene()
-			scene.replace('2')
+			scene.replace('First_effect')
 			log.log('go login scene')
 		except:
 			scene = bge.logic.getCurrentScene()

@@ -158,6 +158,6 @@ def main(cont):
 		# Create our system and show the mouse
 		own['sys'] = MySys()
 		mouse.visible = True
-
+	
 	else:
 		own['sys'].main()

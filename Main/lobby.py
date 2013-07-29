@@ -15,15 +15,19 @@ import os
 import socket
 import log
 import socket
+from threading import Thread
 
 nick = ''
 chat = '''_________________System ::> Connect to server_________________'''
 i = 0
-host = '59.14.14.2'
-port = 10010
+host = '127.0.0.1'
+port = 10135
 clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clis.connect((host,port))
-clis.settimeout(1)
+nickf = open('./.sao/id.idi','r')
+nick = nickf.read()
+clis.sendall(bytes(nick, 'utf-8'))
+clis.close()
 
 class MySys(bgui.System):
 	def __init__(self):
