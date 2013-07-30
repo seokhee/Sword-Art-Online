@@ -15,7 +15,7 @@ import time
 from threading import Thread
 
 start_time = time.time()
-version = 'v0.0.1.135'
+version = 'v0.0.1.258'
 
 print('''
 ##############################################
@@ -35,6 +35,7 @@ sock.bind((HOST,PORT))
 log('server is running on '+HOST+':'+str(PORT))
 sock.listen(1000)
 sock.settimeout(100)
+
 
 while True:
 	(conn, addr) = sock.accept()

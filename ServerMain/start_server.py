@@ -15,7 +15,7 @@ import time
 from threading import Thread
 
 start_time = time.time()
-version = 'v0.0.1.135'
+version = 'v0.0.1.365'
 
 print('''
 ##############################################
