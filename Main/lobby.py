@@ -13,7 +13,7 @@ import bgui
 import bge
 import os
 import socket
-import log
+from log import *
 import socket
 from threading import Thread
 
@@ -22,12 +22,21 @@ chat = '''_________________System ::> Connect to server_________________'''
 i = 0
 host = '127.0.0.1'
 port = 10135
-clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-clis.connect((host,port))
-nickf = open('./.sao/id.idi','r')
-nick = nickf.read()
-clis.sendall(bytes(nick, 'utf-8'))
-clis.close()
+try:
+	clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	clis.connect((host,port))
+	nickf = open('./.sao/id.idi','r')
+	nick = nickf.read()
+	clis.sendall(bytes(nick, 'utf-8'))
+	clis.close()
+except:
+	scene = bge.logic.getCurrentScene()
+	scene.replace('error')
+	log('Server Error! : ')
+	log('	- Detail : Server '+ host + ':' + str(port) + ' is now offline!')
+	log('	- How to fix this problem? Way1 : Edit line 23, 24 in lobby.py.')
+	log('	- How to fix this problem? Way2 : Start Server yourself.')
+	log('	- How to fix this problem? Way3 : Talk to Server Manager.')
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -87,29 +96,30 @@ class MySys(bgui.System):
 		
 		#init bgui
 		bgui.System.__init__(self)
-		log.log('init')
+		log('init')
 		
 		#draw connections window
-		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.65, 0.17], options=bgui.BGUI_DEFAULT)
-		self.note.colors = [[0.5,0.5,0.5,0.8]] * 4
+		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.68, 0.17], options=bgui.BGUI_DEFAULT)
+		self.note.colors = [[0.9,0.9,0.9,0.8]] * 4
 		self.lbl = bgui.Label(self.note, 'lblconnect', text="|-| Connections |-|", pos=[0.02,0.94], options = bgui.BGUI_DEFAULT)
-		items = [nick]+[]
+		self.lbl.color = [0,0,0,1]
+		items = [nick]+['Kirito','Kaira','Korui','YoungZaCharac','Hello','World','World of Sao','Dev','Build','df','ddd','wer','dd','Asuna']
 		i1 = len(items) - 9
 		if i1 < 1:
 			i1 = 'no more'
 		item = items[0:8] + ['... And '+str(i1)+' players.']
-		self.listf = bgui.Frame(self.note, 'notef', border=0, size=[0.9, 0.85], pos=[0.05, 0.05], options=bgui.BGUI_DEFAULT)
-		self.listf.colors = [[0.5, 0.5, 0.5, 0.8]] * 4
+		self.listf = bgui.Frame(self.note, 'notef', border=0, size=[1, 0.85], pos=[0, 0.05], options=bgui.BGUI_DEFAULT)
+		self.listf.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
 		
-		self.lb = bgui.ListBox(self.listf, "lb", items=item, padding=0.05, size=[0.9, 0.9], pos=[0.05, 0.05])
+		self.lb = bgui.ListBox(self.listf, "lb", items=item, padding=0.05, size=[0.9, 0.9], pos=[0.05, 0.07])
 		
 		#draw chat window
-		self.chat = bgui.Frame(self, 'chat', border=0, size=[0.63, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
-		self.chat.colors = [[0.8, 0.5, 0.8, 0.8]] * 4
+		self.chat = bgui.Frame(self, 'chat', border=0, size=[0.66, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
+		self.chat.colors = [[0.9, 0.9, 0.9, 0.8]] * 4
 		
 		self.head = bgui.Frame(self.chat, 'img', size = [1,0.07], pos = [0,0.93])
 		self.foot = bgui.Frame(self.chat, 'im', size = [1, 0.06], pos = [0,0])
-		self.foot.colors=[[0,0,0,0.6]]*4
+		self.foot.colors=[[0.7,0.7,0.7,0.6]]*4
 		
 		self.lblchat = bgui.Label(self.head, 'lblchat', text="|-| Lobby |-|", pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblchat.color = [0,0,0,1]
@@ -124,29 +134,33 @@ class MySys(bgui.System):
 		self.buttons.on_click = self.sendmessage
 		
 		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
-		self.lblat.color = [0.8,0.8,0.8,0.8]
+		self.lblat.color = [0.5,0.5,0.5,0.8]
 		
 		self.input2 = bgui.TextInput(self.foot, 'input2', "",pt_size = 25, size=[1, 0.95], pos=[0.03, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
-		self.input2.color = [[0.5,0.5,0.5,0.8]]*4
+		self.input2.color = [0.5,0.5,0.5,0.8]
 		
 		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0.1,1,0.1,1], size = [0.98, 0.98], pos = [0.02,0])
 		self.chattext.text = chat
 
 		#creat next button
-		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.12], pos=[0.815, 0.03],options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.13], pos=[0.845, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.connectserver
 				
-		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n|| Mode', size=[0.14, 0.12], pos=[0.65, 0.03],options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n|| Mode', size=[0.14, 0.13], pos=[0.68, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.story
 		
-		#creat HeLooo
+		#creat Hellog
 		
 		file1 = open('./.sao/id.idi','r')
 		data = file1.readlines()
 		file1.close()
 		
-		self.lbl = bgui.Label(self, 'labl', text="Hello, "+str(data[0])+".", pos=[0.77,0.93], options = bgui.BGUI_DEFAULT)
+		self.note2 = bgui.Frame(self, 'note2', border=0, size=[0.305, 0.1], pos=[0.68, 0.9], options=bgui.BGUI_DEFAULT)
+		self.note2.colors = [[0.9,0.9,0.9,0.8]] * 4
+		
+		self.lbl1 = bgui.Label(self, 'labl', text="Hello, "+str(data[0])+".", pos=[0.7,0.93], options = bgui.BGUI_DEFAULT)
+		self.lbl1.color = [0.3,0.3,0.3,1]
 		
 		# Create Key Map'''
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -216,7 +230,7 @@ def main(cont):
 		# Create our system and show the mouse
 		own['sys'] = MySys()
 		mouse.visible = True
-		log.log('add Mysys()')
+		log('add Mysys()')
 	else:
 		own['sys'].main()
 

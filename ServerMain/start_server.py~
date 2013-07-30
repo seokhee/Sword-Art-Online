@@ -28,7 +28,7 @@ log('Server Version : ' + version)
 # Server Program
            
 PORT = 10135
-HOST = '59.14.14.2'
+HOST = '127.0.0.1'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((HOST,PORT))

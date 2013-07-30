@@ -36,6 +36,7 @@ log('server is running on '+HOST+':'+str(PORT))
 sock.listen(1000)
 sock.settimeout(100)
 
+
 while True:
 	(conn, addr) = sock.accept()
 	text = str(addr[0])+' is connect!'
