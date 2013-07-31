@@ -14,6 +14,21 @@ import bge
 import time
 import os
 import log
+from bge import logic
+
+identity = 'ID'
+password = 'Password'
+
+try:
+	file1 = open('./.sao/id.idi')
+	identity = file1.read()
+	file1.close()
+	file2 = open('./.sao/pass.idi')
+	password = file2.read()
+	file2.close()
+except:
+	identity = 'ID'
+	password = 'Password'
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -80,10 +95,10 @@ class MySys(bgui.System):
 		
 		#Active lable
 		#id
-		self.input2 = bgui.TextInput(self, 'identity',"ID",pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
+		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL)
 		#password
-		self.input3 = bgui.TextInput(self, 'password', "Password", size=[0.21, 0.08], pos=[0.45, 0.2],
+		self.input3 = bgui.TextInput(self, 'password', password, size=[0.21, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		
 		# Create Key Map
@@ -91,8 +106,13 @@ class MySys(bgui.System):
 		
 	def login(self, widget):
 		print("login")
-		#self.button = bgui.FrameButton(self, 'btn2', text='Linkdfdfdfdf Start!', size=[0.15, 0.08], pos=[0.8, 0.1])
 		#Change Scene...
+		
+		# To get an actuator attached to the controller:
+		#		+--------+  +-------------------------+
+		#		+ Python +--+ Actuator "actuatorname" |
+		#   	+--------+  +-------------------------+
+		
 		try:
 			log.log('cheak .sao folder')
 			dirname = './.sao'
@@ -108,7 +128,7 @@ class MySys(bgui.System):
 			file2.write(self.input3.text)
 			file2.close()
 			scene = bge.logic.getCurrentScene()
-			scene.replace('2')
+			scene.replace('First_effect')
 			log.log('go login scene')
 		except:
 			scene = bge.logic.getCurrentScene()

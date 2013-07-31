@@ -19,24 +19,28 @@ from threading import Thread
 
 nick = ''
 chat = '''_________________System ::> Connect to server_________________'''
+tmp1 = '''_________________'''
 i = 0
 host = '127.0.0.1'
 port = 10135
+svrstat = 0
 try:
+	log('try connect to server!')
 	clis = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	clis.connect((host,port))
 	nickf = open('./.sao/id.idi','r')
 	nick = nickf.read()
 	clis.sendall(bytes(nick, 'utf-8'))
-	clis.close()
 except:
-	scene = bge.logic.getCurrentScene()
-	scene.replace('error')
+	chat = tmp1 + 'System ::> Server Error!' + tmp1 + '''
+	
+	-Server is offline! You can play only Story mode'''
 	log('Server Error! : ')
 	log('	- Detail : Server '+ host + ':' + str(port) + ' is now offline!')
-	log('	- How to fix this problem? Way1 : Edit line 23, 24 in lobby.py.')
+	log('	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.')
 	log('	- How to fix this problem? Way2 : Start Server yourself.')
 	log('	- How to fix this problem? Way3 : Talk to Server Manager.')
+	svrstat = 1
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -140,35 +144,49 @@ class MySys(bgui.System):
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		self.input2.color = [0.5,0.5,0.5,0.8]
 		
-		self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0.1,1,0.1,1], size = [0.98, 0.98], pos = [0.02,0])
-		self.chattext.text = chat
+		if svrstat == 0:
+			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [0.3,0.85,0.3,1], size = [0.98, 0.98], pos = [0.02,0])
+			self.chattext.text = tmp1 + 'System ::> Connect to server' + tmp1
+		elif svrstat == 1:
+			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 20, color = [1,0.6,0.2,1], size = [0.98, 0.98], pos = [0.02,0])
 
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.13], pos=[0.845, 0.022],options = bgui.BGUI_DEFAULT)
-		self.button.on_click = self.connectserver
-				
+		self.button.on_click = self.multi
+		
 		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n|| Mode', size=[0.14, 0.13], pos=[0.68, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.story
 		
-		#creat Hellog
+		#creat Hello
 		
 		file1 = open('./.sao/id.idi','r')
 		data = file1.readlines()
 		file1.close()
 		
 		self.note2 = bgui.Frame(self, 'note2', border=0, size=[0.305, 0.1], pos=[0.68, 0.9], options=bgui.BGUI_DEFAULT)
-		self.note2.colors = [[0.9,0.9,0.9,0.8]] * 4
+		self.note2.colors = [[0.9,0.75,0.4,0.8]] * 4
+		
+		self.lbl2 = bgui.Label(self, 'lab2', text="Hello, "+str(data[0])+".", pos=[0.7015,0.927], options = bgui.BGUI_DEFAULT)
+		self.lbl2.color = [0.1,0.1,0.1,0.4]
 		
 		self.lbl1 = bgui.Label(self, 'labl', text="Hello, "+str(data[0])+".", pos=[0.7,0.93], options = bgui.BGUI_DEFAULT)
-		self.lbl1.color = [0.3,0.3,0.3,1]
+		self.lbl1.color = [1,1,1,0.9]
 		
-		# Create Key Map'''
+		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 
-	def connectserver(self, widget):
-		print('server connect')
-		scene = bge.logic.getCurrentScene()
-		scene.replace('multi')
+	def multi(self, widget):
+		if svrstat == 0:
+			scene = bge.logic.getCurrentScene()
+			scene.replace('multi')
+		if svrstat == 1:
+			chat = tmp1 + 'System ::> Server is offline!!' + tmp1
+			self.chattext.text = chat
+			log(chat)
+			cont = bge.logic.getCurrentController()
+			act = cont.actuators["Sound"]
+			act.startSound()
+		
 	
 	def story(self, widget):
 		print('story mode')
@@ -234,4 +252,4 @@ def main(cont):
 	else:
 		own['sys'].main()
 
-
+clis.close()
