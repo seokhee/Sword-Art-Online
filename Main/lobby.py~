@@ -183,17 +183,32 @@ class MySys(bgui.System):
 			chat = tmp1 + 'System ::> Server is offline!!' + tmp1
 			self.chattext.text = chat
 			log(chat)
+			cont = bge.logic.getCurrentController()
+			act = cont.actuators["Sound"]
+			act.startSound()
+	
+	def clk_sound(self):
+		cont = bge.logic.getCurrentController()
+		act = cont.actuators['clk']
+		act.startSound()
 	
 	def story(self, widget):
-		print('story mode')
+		log('story mode')
 		scene = bge.logic.getCurrentScene()
 		scene.replace('story')
 	
 	def sendmessage(self, widget):
-		print('send message')
-		clis.sendall(bytes(self.input2.text,'utf-8'))
-		data = clis.recv(1024)
-		self.input2.text = ''
+		log('send message')
+		if svrstat ==0:
+			clis.sendall(bytes(self.input2.text,'utf-8'))
+			data = clis.recv(1024)
+			self.input2.text = ''
+			self.clk_sound()
+		elif svrstat == 1:
+			self.input2.text = ''
+			self.chattext.text = tmp1 + 'System ::> Server is offline!' + tmp1
+			log('Server Error! cause:server is offline.')
+			self.clk_sound()
 			
 	def con2ser(self, widget):
 		print('link start')

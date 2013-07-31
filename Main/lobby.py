@@ -136,6 +136,7 @@ class MySys(bgui.System):
 		
 		self.buttons = bgui.FrameButton(self.foot, 'buttons', text='Send',pt_size = 20, size=[0.085, 0.8], pos=[0.91, 0.1],options = bgui.BGUI_DEFAULT)
 		self.buttons.on_click = self.sendmessage
+		self.buttons.on_hover = self.hover_sound
 		
 		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblat.color = [0.5,0.5,0.5,0.8]
@@ -153,9 +154,11 @@ class MySys(bgui.System):
 		#creat next button
 		self.button = bgui.FrameButton(self, 'button', text='|| Join\n|| Server', size=[0.14, 0.13], pos=[0.845, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.multi
+		self.button.on_hover = self.hover_sound
 		
 		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n|| Mode', size=[0.14, 0.13], pos=[0.68, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.story
+		self.button.on_hover = self.hover_sound
 		
 		#creat Hello
 		
@@ -187,17 +190,33 @@ class MySys(bgui.System):
 			act = cont.actuators["Sound"]
 			act.startSound()
 		
+	def hover_sound(self, widget):
+		cont = bge.logic.getCurrentController()
+		act = cont.actuators['hvr']
+		act.startSound()
+	
+	def clk_sound(self):
+		cont = bge.logic.getCurrentController()
+		act = cont.actuators['clk']
+		act.startSound()
 	
 	def story(self, widget):
-		print('story mode')
+		log('story mode')
 		scene = bge.logic.getCurrentScene()
 		scene.replace('story')
 	
 	def sendmessage(self, widget):
-		print('send message')
-		clis.sendall(bytes(self.input2.text,'utf-8'))
-		data = clis.recv(1024)
-		self.input2.text = ''
+		log('send message')
+		if svrstat ==0:
+			clis.sendall(bytes(self.input2.text,'utf-8'))
+			data = clis.recv(1024)
+			self.input2.text = ''
+			self.clk_sound()
+		elif svrstat == 1:
+			self.input2.text = ''
+			self.chattext.text = tmp1 + 'System ::> Server is offline!' + tmp1
+			log('Server Error! cause:server is offline.')
+			self.clk_sound()
 			
 	def con2ser(self, widget):
 		print('link start')

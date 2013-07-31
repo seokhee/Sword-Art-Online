@@ -92,20 +92,24 @@ class MySys(bgui.System):
 		#button create
 		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
+		self.button.on_hover = self.hover_sound
 		
 		#Active lable
 		#id
 		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL)
+		self.input2.on_hover = self.hover_sound
+		
 		#password
 		self.input3 = bgui.TextInput(self, 'password', password, size=[0.21, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		self.input3.on_hover = self.hover_sound
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 		
 	def login(self, widget):
-		print("login")
+		log.log("login")
 		#Change Scene...
 		try:
 			log.log('cheak .sao folder')
@@ -128,7 +132,12 @@ class MySys(bgui.System):
 			scene = bge.logic.getCurrentScene()
 			scene.replace('error')
 			log.log('Error on login')
-
+	
+	def hover_sound(self, widget):
+		cont = bge.logic.getCurrentController()
+		act = cont.actuators['hvr']
+		act.startSound()
+	
 	def main(self):
 		"""A high-level method to be run every frame"""
 		
@@ -172,6 +181,5 @@ def main(cont):
 		# Create our system and show the mouse
 		own['sys'] = MySys()
 		mouse.visible = True
-	
 	else:
 		own['sys'].main()
