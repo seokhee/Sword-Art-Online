@@ -55,8 +55,8 @@ class Mouselook:
 		self.getProperties()
 		
 		self.moveMouse()
-		#self.moveLoc()
-		#self.moveDynam()
+		self.moveLoc()
+		self.moveDynam()
 	
 	def getProperties(self):
 		self.size = self.getWindowSize()
