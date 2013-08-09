@@ -182,6 +182,7 @@ class MySys(bgui.System):
 		if svrstat == 0:
 			scene = bge.logic.getCurrentScene()
 			scene.replace('multi')
+			bge.logic.mouse.visible = True
 		if svrstat == 1:
 			chat = tmp1 + 'System ::> Server is offline!!' + tmp1
 			self.chattext.text = chat
@@ -204,6 +205,7 @@ class MySys(bgui.System):
 		log('story mode')
 		scene = bge.logic.getCurrentScene()
 		scene.replace('story')
+		bge.logic.mouse.visible = True
 	
 	def sendmessage(self, widget):
 		log('send message')

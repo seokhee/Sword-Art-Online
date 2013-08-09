@@ -18,6 +18,7 @@ from bge import logic
 
 identity = 'ID'
 password = 'Password'
+iss = 1
 
 try:
 	file1 = open('./.sao/id.idi')
@@ -98,9 +99,12 @@ class MySys(bgui.System):
 		#id
 		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL)
+		self.input2.on_hover = self.hover_sound
+		
 		#password
 		self.input3 = bgui.TextInput(self, 'password', password, size=[0.21, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		self.input3.on_hover = self.hover_sound
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -131,9 +135,14 @@ class MySys(bgui.System):
 			log.log('Error on login')
 	
 	def hover_sound(self, widget):
-		cont = bge.logic.getCurrentController()
-		act = cont.actuators['hvr']
-		act.startSound()
+		if iss == 1:
+			iss = 0
+			cont = bge.logic.getCurrentController()
+			act = cont.actuators['hvr']
+			act.startSound()
+	
+	def setting(self, widget):
+		iss = 0
 	
 	def main(self):
 		"""A high-level method to be run every frame"""

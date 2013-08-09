@@ -18,6 +18,7 @@ from bge import logic
 
 identity = 'ID'
 password = 'Password'
+iss = 1
 
 try:
 	file1 = open('./.sao/id.idi')
@@ -134,9 +135,14 @@ class MySys(bgui.System):
 			log.log('Error on login')
 	
 	def hover_sound(self, widget):
-		cont = bge.logic.getCurrentController()
-		act = cont.actuators['hvr']
-		act.startSound()
+		if iss == 1:
+			iss = 
+			cont = bge.logic.getCurrentController()
+			act = cont.actuators['hvr']
+			act.startSound()
+	
+	def setting(self, widget):
+		iss = 0
 	
 	def main(self):
 		"""A high-level method to be run every frame"""
