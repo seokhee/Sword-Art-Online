@@ -10,9 +10,12 @@
 import time
 from time import localtime, strftime
 
+log_prefix = ''
+log_endfix = ''
+
 def log(text):
 	try:
-		prt = "["+strftime('%Y-%m-%d %H:%M:%S', localtime())+"] "+ text
+		prt = "["+strftime('%Y-%m-%d %H:%M:%S', localtime())+"] "+ log_prefix + text + log_endfix
 		logfile = open('./.sao/game.log','a')
 		logfile.write(prt+'\n')
 		logfile.close()

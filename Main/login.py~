@@ -16,6 +16,7 @@ import os
 import log
 from bge import logic
 
+log.log_prefix = 'Login Scene'
 identity = 'ID'
 password = 'Password'
 iss = 1
@@ -94,17 +95,20 @@ class MySys(bgui.System):
 		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
 		self.button.on_hover = self.hover_sound
+		self.button.on_mouse_exit = self.setting
 		
 		#Active lable
 		#id
 		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL)
 		self.input2.on_hover = self.hover_sound
+		self.input2.on_mouse_exit = self.setting
 		
 		#password
 		self.input3 = bgui.TextInput(self, 'password', password, size=[0.21, 0.08], pos=[0.45, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		self.input3.on_hover = self.hover_sound
+		self.input3.on_mouse_exit = self.setting
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -135,15 +139,18 @@ class MySys(bgui.System):
 			log.log('Error on login')
 	
 	def hover_sound(self, widget):
+		global iss ######!!! IMPORTANT !!!  Make sure
 		if iss == 1:
 			iss = 0
 			cont = bge.logic.getCurrentController()
 			act = cont.actuators['hvr']
 			act.startSound()
-	
+		
 	def setting(self, widget):
-		iss = 0
-	
+		global iss
+		if iss == 0:
+			iss = 1
+		
 	def main(self):
 		"""A high-level method to be run every frame"""
 		
