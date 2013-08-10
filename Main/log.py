@@ -16,7 +16,7 @@ log_endfix = ''
 def log(text):
 	try:
 		prt = "["+strftime('%Y-%m-%d %H:%M:%S', localtime())+"] "+ log_prefix + text + log_endfix
-		logfile = open('./.sao/game.log','a')
+		logfile = open('.sao/game.log','a')
 		logfile.write(prt+'\n')
 		logfile.close()
 		print(prt)
