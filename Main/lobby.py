@@ -226,13 +226,16 @@ class MySys(bgui.System):
 		if svrstat ==0:
 			clis.sendall(bytes(self.input2.text,'utf-8'))
 			data = clis.recv(1024)
+			log.log('Player Send Msg : ' + self.input2.text)
 			self.input2.text = ''
 			self.clk_sound()
 		elif svrstat == 1:
+			log.log('Player Lost Msg : ' + self.input2.text)
 			self.input2.text = ''
 			self.chattext.text = tmp1 + 'System ::> Server is offline!' + tmp1
 			log.log('Server Error! cause:server is offline.')
 			self.clk_sound()
+			
 			
 	def con2ser(self, widget):
 		print('link start')

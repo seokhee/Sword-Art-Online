@@ -13,24 +13,23 @@ import bgui
 import bge
 import time
 import os
-import log
-from bge import logic
-
-log.log_prefix = 'Login Scene'
 identity = 'ID'
 password = 'Password'
+file1 = open('./.sao/id.idi')
+identity = file1.read()
+file1.close()
+file2 = open('./.sao/pass.idi')
+password = file2.read()
+file2.close()
+
+#import log
+from bge import logic
+
+#log.log_prefix = 'Login : '
+
 iss = 1
 
-try:
-	file1 = open('./.sao/id.idi')
-	identity = file1.read()
-	file1.close()
-	file2 = open('./.sao/pass.idi')
-	password = file2.read()
-	file2.close()
-except:
-	identity = 'ID'
-	password = 'Password'
+
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -89,7 +88,7 @@ class MySys(bgui.System):
 		
 		#init bgui
 		bgui.System.__init__(self)
-		log.log('start game')
+		#log.log('start game')
 		
 		#button create
 		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
@@ -114,29 +113,29 @@ class MySys(bgui.System):
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 		
 	def login(self, widget):
-		log.log("login")
+		#log.log("login")
 		#Change Scene...
 		try:
-			log.log('cheak .sao folder')
+			#log.log('cheak .sao folder')
 			dirname = './.sao'
 			if not os.path.isdir('./.sao'):
 				os.mkdir('./.sao')
-				log.log('''mkdir ".sao" ''')
-			log.log('start write id')
+				#log.log('''mkdir ".sao" ''')
+			#log.log('start write id')
 			file1 = open('./.sao/id.idi','w')
 			file1.write(self.input2.text)
 			file1.close()
-			log.log('start write pass')
+			#log.log('start write pass')
 			file2 = open('./.sao/pass.idi', 'w')
 			file2.write(self.input3.text)
 			file2.close()
 			scene = bge.logic.getCurrentScene()
 			scene.replace('First_effect')
-			log.log('go login scene')
+			#log.log('go login scene')
 		except:
 			scene = bge.logic.getCurrentScene()
 			scene.replace('error')
-			log.log('Error on login')
+			#log.log('Error on login')
 	
 	def hover_sound(self, widget):
 		global iss ######!!! IMPORTANT !!!  Make sure

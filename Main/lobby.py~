@@ -186,21 +186,21 @@ class MySys(bgui.System):
 
 	def multi(self, widget):
 		if svrstat == 0:
-			scene = bge.log.logic.getCurrentScene()
+			scene = bge.logic.getCurrentScene()
 			scene.replace('multi')
-			bge.log.logic.mouse.visible = False
+			bge.logic.mouse.visible = False
 		if svrstat == 1:
 			chat = tmp1 + 'System ::> Server is offline!!' + tmp1
 			self.chattext.text = chat
 			log.log(chat)
-			cont = bge.log.logic.getCurrentController()
+			cont = bge.logic.getCurrentController()
 			act = cont.actuators["Sound"]
 			act.startSound()
 		
 	def hover_sound(self, widget):
 		global ishvrsnd 
 		if ishvrsnd is True:
-			cont = bge.log.logic.getCurrentController()
+			cont = bge.logic.getCurrentController()
 			act = cont.actuators['hvr']
 			act.startSound()
 			ishvrsnd = False
@@ -211,15 +211,15 @@ class MySys(bgui.System):
 			ishvrsnd = True
 	
 	def clk_sound(self):
-		cont = bge.log.logic.getCurrentController()
+		cont = bge.logic.getCurrentController()
 		act = cont.actuators['clk']
 		act.startSound()
 	
 	def story(self, widget):
 		log.log('story mode')
-		scene = bge.log.logic.getCurrentScene()
+		scene = bge.logic.getCurrentScene()
 		scene.replace('story')
-		bge.log.logic.mouse.visible = True
+		bge.logic.mouse.visible = True
 	
 	def sendmessage(self, widget):
 		log.log('send message')
@@ -228,11 +228,13 @@ class MySys(bgui.System):
 			data = clis.recv(1024)
 			self.input2.text = ''
 			self.clk_sound()
+			log.log('Player Send Msg : ' + self.input2.text)
 		elif svrstat == 1:
 			self.input2.text = ''
 			self.chattext.text = tmp1 + 'System ::> Server is offline!' + tmp1
 			log.log('Server Error! cause:server is offline.')
 			self.clk_sound()
+			log.log('Player Lost Msg : ' + self.input2.text)
 			
 	def con2ser(self, widget):
 		print('link start')
@@ -244,7 +246,7 @@ class MySys(bgui.System):
 		"""A high-level method to be run every frame"""
 		
 		# Handle the mouse
-		mouse = bge.log.logic.mouse
+		mouse = bge.logic.mouse
 		
 		pos = list(mouse.position)
 		pos[0] *= bge.render.getWindowWidth()
@@ -253,32 +255,32 @@ class MySys(bgui.System):
 		mouse_state = bgui.BGUI_MOUSE_NONE
 		mouse_events = mouse.events
 				
-		if mouse_events[bge.events.LEFTMOUSE] == bge.log.logic.KX_INPUT_JUST_ACTIVATED:
+		if mouse_events[bge.events.LEFTMOUSE] == bge.logic.KX_INPUT_JUST_ACTIVATED:
 			mouse_state = bgui.BGUI_MOUSE_CLICK
-		elif mouse_events[bge.events.LEFTMOUSE] == bge.log.logic.KX_INPUT_JUST_RELEASED:
+		elif mouse_events[bge.events.LEFTMOUSE] == bge.logic.KX_INPUT_JUST_RELEASED:
 			mouse_state = bgui.BGUI_MOUSE_RELEASE
-		elif mouse_events[bge.events.LEFTMOUSE] == bge.log.logic.KX_INPUT_ACTIVE:
+		elif mouse_events[bge.events.LEFTMOUSE] == bge.logic.KX_INPUT_ACTIVE:
 			mouse_state = bgui.BGUI_MOUSE_ACTIVE
 		
 		self.update_mouse(pos, mouse_state)
 		
 		# Handle the keyboard
-		keyboard = bge.log.logic.keyboard
+		keyboard = bge.logic.keyboard
 		
 		key_events = keyboard.events
-		is_shifted = key_events[bge.events.LEFTSHIFTKEY] == bge.log.logic.KX_INPUT_ACTIVE or \
-					key_events[bge.events.RIGHTSHIFTKEY] == bge.log.logic.KX_INPUT_ACTIVE
+		is_shifted = key_events[bge.events.LEFTSHIFTKEY] == bge.logic.KX_INPUT_ACTIVE or \
+					key_events[bge.events.RIGHTSHIFTKEY] == bge.logic.KX_INPUT_ACTIVE
 					
 		for key, state in keyboard.events.items():
-			if state == bge.log.logic.KX_INPUT_JUST_ACTIVATED:
+			if state == bge.logic.KX_INPUT_JUST_ACTIVATED:
 				self.update_keyboard(self.keymap[key], is_shifted)
 		
 		# Now setup the scene callback so we can draw
-		bge.log.logic.getCurrentScene().post_draw = [self.render]
+		bge.logic.getCurrentScene().post_draw = [self.render]
 
 def main(cont):
 	own = cont.owner
-	mouse = bge.log.logic.mouse
+	mouse = bge.logic.mouse
 	if 'sys' not in own:
 		# Create our system and show the mouse
 		own['sys'] = MySys()

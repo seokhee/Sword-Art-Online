@@ -13,24 +13,23 @@ import bgui
 import bge
 import time
 import os
+identity = 'ID'
+password = 'Password'
+file1 = open('./.sao/id.idi')
+identity = file1.read()
+file1.close()
+file2 = open('./.sao/pass.idi')
+password = file2.read()
+file2.close()
+
 import log
 from bge import logic
 
 log.log_prefix = 'Login : '
-identity = 'ID'
-password = 'Password'
+
 iss = 1
 
-try:
-	file1 = open('./.sao/id.idi')
-	identity = file1.read()
-	file1.close()
-	file2 = open('./.sao/pass.idi')
-	password = file2.read()
-	file2.close()
-except:
-	identity = 'ID'
-	password = 'Password'
+
 
 class MySys(bgui.System):
 	def __init__(self):
