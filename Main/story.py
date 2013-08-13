@@ -24,11 +24,11 @@ class MySys(bgui.System):
 	def __init__(self):
 		
 		#init bgui
-		bgui.System.__init__(self)
+		bgui.System.__init__(self, 'default')
 		log.log('Blender Graphic User Interface is Loaded')
 		
 		#clock text
-		self.lbl = bgui.Label(self, 'lblconnect', text=lctime, pt_size = 45 ,pos=[0.85,0.92], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self, 'lblconnect', text=lctime, pt_size = 45 ,pos=[0.85,0.92],sub_theme='Large', options = bgui.BGUI_DEFAULT)
 		self.lbl.color = [0,0,0,0.5]
 		
 		# Create Key Map
