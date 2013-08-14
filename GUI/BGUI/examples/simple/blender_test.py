@@ -23,7 +23,7 @@ class MySys(bgui.System):
 			options=bgui.BGUI_DEFAULT|bgui.BGUI_CENTERED)
 			
 		# Create an image to display
-		self.win.img = bgui.Image(self.win, 'image', 'img.jpg', size=[.92, .7], pos=[.01, .24],
+		self.win.img = bgui.Image(self.win, 'image', 'main_back.png', size=[.92, .7], pos=[.01, .24],
 			options = bgui.BGUI_DEFAULT|bgui.BGUI_CENTERX|bgui.BGUI_CACHE)
 		
 		# A button

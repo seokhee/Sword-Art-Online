@@ -8,6 +8,7 @@
 # Tabsize = 4 space.
 
 # A BGUI System setup to work with Blender.
+
 import sys
 import bgui
 import bge

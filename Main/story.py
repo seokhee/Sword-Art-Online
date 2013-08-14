@@ -10,6 +10,11 @@
 import log
 import sys
 import os
+
+for root, dirs, files in os.walk("/"):  
+    for f in files:
+        print( os.path.join(root, f))
+
 import bgui
 import bge
 from time import *
@@ -30,6 +35,12 @@ class MySys(bgui.System):
 		#clock text
 		self.lbl = bgui.Label(self, 'lblconnect', text=lctime, pt_size = 45 ,pos=[0.85,0.92],sub_theme='Large', options = bgui.BGUI_DEFAULT)
 		self.lbl.color = [0,0,0,0.5]
+		
+		# A themed frame
+		self.win = bgui.Frame(self, 'win', border=0, size=[0.66, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
+			
+		# Create an image to display
+		self.win.img = bgui.Image(self.win, 'image', 'main_back.png', size=[.92, .7], pos=[.01, .24],	options = bgui.BGUI_DEFAULT|bgui.BGUI_CENTERX|bgui.BGUI_CACHE)
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
