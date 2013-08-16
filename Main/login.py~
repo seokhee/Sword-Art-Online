@@ -13,23 +13,28 @@ import bgui
 import bge
 import time
 import os
-identity = 'ID'
-password = 'Password'
-file1 = open('./.sao/id.idi')
-identity = file1.read()
-file1.close()
-file2 = open('./.sao/pass.idi')
-password = file2.read()
-file2.close()
-
-#import log
+import log
 from bge import logic
 
-#log.log_prefix = 'Login : '
+print(os.getcwd())
 
+identity = 'ID'
+password = 'Password'
+
+if not os.path.isdir('.sao'):
+	os.mkdir('.sao')
+	log.log('''mkdir ".sao" ''')
+	log.log(os.getcwd())
+
+file1 = open('.sao/id.idi')
+identity = file1.read()
+file1.close()
+
+file2 = open('.sao/pass.idi')
+password = file2.read()
+file2.close()
+log.log_prefix = 'Login : '
 iss = 1
-
-
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -87,25 +92,24 @@ class MySys(bgui.System):
 		'''
 		
 		#init bgui
-		bgui.System.__init__(self)
-		#log.log('start game')
+		bgui.System.__init__(self, 'themas/login')
+		log.log('start game')
 		
 		#button create
-		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Login!',pt_size = 24, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='L o g i n !',pt_size = 35, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
 		self.button.on_hover = self.hover_sound
 		self.button.on_mouse_exit = self.setting
 		
 		#Active lable
 		#id
-		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 30 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
+		self.input2 = bgui.TextInput(self, 'identity',identity,pt_size = 38 , color = [0,0,0,1],size=[0.21, 0.08], pos=[0.23, 0.2],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL)
 		self.input2.on_hover = self.hover_sound
 		self.input2.on_mouse_exit = self.setting
 		
 		#password
-		self.input3 = bgui.TextInput(self, 'password', password, size=[0.21, 0.08], pos=[0.45, 0.2],
-			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
+		self.input3 = bgui.TextInput(self, 'password', password,pt_size = 38, size=[0.21, 0.08], pos=[0.45, 0.2], input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		self.input3.on_hover = self.hover_sound
 		self.input3.on_mouse_exit = self.setting
 		
@@ -113,29 +117,29 @@ class MySys(bgui.System):
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 		
 	def login(self, widget):
-		#log.log("login")
+		log.log("login")
 		#Change Scene...
 		try:
-			#log.log('cheak .sao folder')
+			log.log('cheak .sao folder')
 			dirname = './.sao'
 			if not os.path.isdir('./.sao'):
 				os.mkdir('./.sao')
-				#log.log('''mkdir ".sao" ''')
-			#log.log('start write id')
+				log.log('''mkdir ".sao" ''')
+			log.log('start write id')
 			file1 = open('./.sao/id.idi','w')
 			file1.write(self.input2.text)
 			file1.close()
-			#log.log('start write pass')
+			log.log('start write pass')
 			file2 = open('./.sao/pass.idi', 'w')
 			file2.write(self.input3.text)
 			file2.close()
 			scene = bge.logic.getCurrentScene()
 			scene.replace('First_effect')
-			#log.log('go login scene')
+			log.log('go login scene')
 		except:
 			scene = bge.logic.getCurrentScene()
 			scene.replace('error')
-			#log.log('Error on login')
+			log.log('Error on login')
 	
 	def hover_sound(self, widget):
 		global iss ######!!! IMPORTANT !!!  Make sure
@@ -149,6 +153,9 @@ class MySys(bgui.System):
 		global iss
 		if iss == 0:
 			iss = 1
+	
+	def sceret(self):
+		self.input3.text = '*' * len(self.input3.text)
 		
 	def main(self):
 		"""A high-level method to be run every frame"""
@@ -189,6 +196,9 @@ class MySys(bgui.System):
 def main(cont):
 	own = cont.owner
 	mouse = bge.logic.mouse
+	
+	#print(os.getcwd())
+	
 	if 'sys' not in own:
 		# Create our system and show the mouse
 		own['sys'] = MySys()

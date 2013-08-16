@@ -1,0 +1,651 @@
+[2013-08-15 18:30:03] mkdir ".sao" 
+[2013-08-15 18:30:03] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-15 18:30:03] Login : start game
+[2013-08-15 18:33:18] Login : start game
+[2013-08-15 18:34:27] Login : start game
+[2013-08-15 18:35:04] Login : start game
+[2013-08-15 18:35:07] Login : start game
+[2013-08-15 18:35:34] Login : start game
+[2013-08-15 18:37:37] Login : start game
+[2013-08-15 18:37:43] Login : start game
+[2013-08-15 18:38:34] Login : start game
+[2013-08-15 18:38:40] Login : start game
+[2013-08-15 18:38:57] Login : start game
+[2013-08-15 18:39:08] Login : start game
+[2013-08-15 18:39:18] Login : start game
+[2013-08-15 18:39:38] Login : start game
+[2013-08-15 18:41:24] Login : start game
+[2013-08-15 18:41:33] Login : start game
+[2013-08-15 18:41:39] Login : start game
+[2013-08-15 18:41:53] Login : start game
+[2013-08-15 18:41:58] Login : start game
+[2013-08-15 18:42:06] Login : start game
+[2013-08-15 18:42:17] Login : start game
+[2013-08-15 18:51:34] Login : start game
+[2013-08-15 18:52:02] Login : start game
+[2013-08-15 18:52:07] Login : start game
+[2013-08-15 18:52:53] Login : start game
+[2013-08-15 18:53:30] Login : start game
+[2013-08-15 18:53:34] Login : start game
+[2013-08-15 18:53:52] Login : start game
+[2013-08-15 18:54:32] Login : start game
+[2013-08-15 18:55:00] Login : start game
+[2013-08-15 18:55:25] Login : start game
+[2013-08-15 18:55:33] Login : start game
+[2013-08-15 18:55:41] Login : start game
+[2013-08-15 18:55:52] Login : start game
+[2013-08-15 18:56:41] Login : start game
+[2013-08-15 18:56:56] Login : start game
+[2013-08-15 18:57:16] Login : start game
+[2013-08-15 19:00:15] Login : start game
+[2013-08-15 19:01:14] Login : start game
+[2013-08-15 19:01:28] Login : start game
+[2013-08-15 19:02:20] Login : start game
+[2013-08-15 19:02:32] Login : start game
+[2013-08-15 19:02:48] Login : login
+[2013-08-15 19:02:48] Login : cheak .sao folder
+[2013-08-15 19:02:48] Login : start write id
+[2013-08-15 19:02:48] Login : start write pass
+[2013-08-15 19:02:48] Login : go login scene
+[2013-08-15 19:02:50] Lobby : try connect to server!
+[2013-08-15 19:02:50] Lobby : Server Error! : 
+[2013-08-15 19:02:50] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:02:50] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:02:50] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:02:50] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:02:50] Lobby : init
+[2013-08-15 19:02:50] Lobby : add Mysys()
+[2013-08-15 19:04:23] Login : start game
+[2013-08-15 19:04:25] Login : start game
+[2013-08-15 19:10:23] Login : start game
+[2013-08-15 19:10:28] Lobby : try connect to server!
+[2013-08-15 19:10:28] Lobby : Server Error! : 
+[2013-08-15 19:10:28] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:10:28] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:10:28] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:10:28] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:10:28] Lobby : init
+[2013-08-15 19:10:28] Lobby : add Mysys()
+[2013-08-15 19:12:58] Lobby : try connect to server!
+[2013-08-15 19:12:58] Lobby : Server Error! : 
+[2013-08-15 19:12:58] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:12:58] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:12:58] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:12:58] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:12:58] Lobby : init
+[2013-08-15 19:12:58] Lobby : add Mysys()
+[2013-08-15 19:13:00] Lobby : try connect to server!
+[2013-08-15 19:13:00] Lobby : Server Error! : 
+[2013-08-15 19:13:00] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:13:00] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:13:00] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:13:00] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:13:00] Lobby : init
+[2013-08-15 19:13:00] Lobby : add Mysys()
+[2013-08-15 19:14:07] Lobby : try connect to server!
+[2013-08-15 19:14:07] Lobby : Server Error! : 
+[2013-08-15 19:14:07] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:14:07] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:14:07] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:14:07] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:14:07] Lobby : init
+[2013-08-15 19:14:07] Lobby : add Mysys()
+[2013-08-15 19:15:20] Lobby : try connect to server!
+[2013-08-15 19:15:20] Lobby : Server Error! : 
+[2013-08-15 19:15:20] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:15:20] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:15:20] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:15:20] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:15:20] Lobby : init
+[2013-08-15 19:15:20] Lobby : add Mysys()
+[2013-08-15 19:15:39] Lobby : try connect to server!
+[2013-08-15 19:15:39] Lobby : Server Error! : 
+[2013-08-15 19:15:39] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:15:39] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:15:39] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:15:39] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:15:39] Lobby : init
+[2013-08-15 19:15:39] Lobby : add Mysys()
+[2013-08-15 19:15:50] Lobby : try connect to server!
+[2013-08-15 19:15:50] Lobby : Server Error! : 
+[2013-08-15 19:15:50] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:15:50] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:15:50] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:15:50] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:15:50] Lobby : init
+[2013-08-15 19:15:50] Lobby : add Mysys()
+[2013-08-15 19:28:23] Lobby : try connect to server!
+[2013-08-15 19:28:23] Lobby : Server Error! : 
+[2013-08-15 19:28:23] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:28:23] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:28:23] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:28:23] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:28:23] Lobby : init
+[2013-08-15 19:28:23] Lobby : add Mysys()
+[2013-08-15 19:28:31] Lobby : try connect to server!
+[2013-08-15 19:28:31] Lobby : Server Error! : 
+[2013-08-15 19:28:31] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:28:31] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:28:31] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:28:31] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:28:31] Lobby : init
+[2013-08-15 19:28:31] Lobby : add Mysys()
+[2013-08-15 19:28:41] Lobby : try connect to server!
+[2013-08-15 19:28:41] Lobby : Server Error! : 
+[2013-08-15 19:28:41] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:28:41] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:28:41] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:28:41] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:28:41] Lobby : init
+[2013-08-15 19:28:41] Lobby : add Mysys()
+[2013-08-15 19:28:55] Lobby : try connect to server!
+[2013-08-15 19:28:55] Lobby : Server Error! : 
+[2013-08-15 19:28:55] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:28:55] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:28:55] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:28:55] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:28:55] Lobby : init
+[2013-08-15 19:28:55] Lobby : add Mysys()
+[2013-08-15 19:29:03] Lobby : try connect to server!
+[2013-08-15 19:29:03] Lobby : Server Error! : 
+[2013-08-15 19:29:03] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:29:03] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:29:03] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:29:03] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:29:03] Lobby : init
+[2013-08-15 19:29:03] Lobby : add Mysys()
+[2013-08-15 19:29:13] Lobby : try connect to server!
+[2013-08-15 19:29:13] Lobby : Server Error! : 
+[2013-08-15 19:29:13] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:29:13] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:29:13] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:29:13] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:29:13] Lobby : init
+[2013-08-15 19:29:13] Lobby : add Mysys()
+[2013-08-15 19:29:35] Lobby : try connect to server!
+[2013-08-15 19:29:35] Lobby : Server Error! : 
+[2013-08-15 19:29:35] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:29:35] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:29:35] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:29:35] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:29:35] Lobby : init
+[2013-08-15 19:29:35] Lobby : add Mysys()
+[2013-08-15 19:29:47] Lobby : try connect to server!
+[2013-08-15 19:29:47] Lobby : Server Error! : 
+[2013-08-15 19:29:47] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:29:47] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:29:47] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:29:47] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:29:47] Lobby : init
+[2013-08-15 19:29:47] Lobby : add Mysys()
+[2013-08-15 19:29:53] Lobby : try connect to server!
+[2013-08-15 19:29:53] Lobby : Server Error! : 
+[2013-08-15 19:29:53] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:29:53] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:29:53] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:29:53] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:29:53] Lobby : init
+[2013-08-15 19:29:53] Lobby : add Mysys()
+[2013-08-15 19:34:40] Lobby : try connect to server!
+[2013-08-15 19:34:40] Lobby : Server Error! : 
+[2013-08-15 19:34:40] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:34:40] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:34:40] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:34:40] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:34:40] Lobby : init
+[2013-08-15 19:34:40] Lobby : add Mysys()
+[2013-08-15 19:34:46] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-15 19:34:46] Login : start game
+[2013-08-15 19:34:54] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-15 19:34:54] Login : start game
+[2013-08-15 19:35:02] Lobby : try connect to server!
+[2013-08-15 19:35:02] Lobby : Server Error! : 
+[2013-08-15 19:35:02] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:35:02] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:35:02] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:35:02] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:35:02] Lobby : init
+[2013-08-15 19:35:02] Lobby : add Mysys()
+[2013-08-15 19:35:25] Lobby : try connect to server!
+[2013-08-15 19:35:25] Lobby : Server Error! : 
+[2013-08-15 19:35:25] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:35:25] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:35:25] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:35:25] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:35:25] Lobby : init
+[2013-08-15 19:35:25] Lobby : add Mysys()
+[2013-08-15 19:35:34] Lobby : try connect to server!
+[2013-08-15 19:35:34] Lobby : Server Error! : 
+[2013-08-15 19:35:34] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:35:34] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:35:34] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:35:34] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:35:34] Lobby : init
+[2013-08-15 19:35:34] Lobby : add Mysys()
+[2013-08-15 19:36:02] Lobby : try connect to server!
+[2013-08-15 19:36:02] Lobby : Server Error! : 
+[2013-08-15 19:36:02] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:36:02] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:36:02] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:36:02] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:36:02] Lobby : init
+[2013-08-15 19:36:02] Lobby : add Mysys()
+[2013-08-15 19:36:59] Lobby : try connect to server!
+[2013-08-15 19:36:59] Lobby : Server Error! : 
+[2013-08-15 19:36:59] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:36:59] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:36:59] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:36:59] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:36:59] Lobby : init
+[2013-08-15 19:36:59] Lobby : add Mysys()
+[2013-08-15 19:37:15] Lobby : try connect to server!
+[2013-08-15 19:37:15] Lobby : Server Error! : 
+[2013-08-15 19:37:15] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:37:15] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:37:15] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:37:15] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:37:15] Lobby : init
+[2013-08-15 19:37:15] Lobby : add Mysys()
+[2013-08-15 19:37:48] Lobby : try connect to server!
+[2013-08-15 19:37:48] Lobby : Server Error! : 
+[2013-08-15 19:37:48] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:37:48] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:37:48] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:37:48] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:37:48] Lobby : init
+[2013-08-15 19:37:48] Lobby : add Mysys()
+[2013-08-15 19:38:08] Lobby : try connect to server!
+[2013-08-15 19:38:08] Lobby : Server Error! : 
+[2013-08-15 19:38:08] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:38:08] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:38:08] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:38:08] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:38:08] Lobby : init
+[2013-08-15 19:38:08] Lobby : add Mysys()
+[2013-08-15 19:52:00] Lobby : try connect to server!
+[2013-08-15 19:52:00] Lobby : Server Error! : 
+[2013-08-15 19:52:00] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:52:00] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:52:00] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:52:00] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:52:00] Lobby : init
+[2013-08-15 19:52:00] Lobby : add Mysys()
+[2013-08-15 19:52:27] Lobby : try connect to server!
+[2013-08-15 19:52:27] Lobby : Server Error! : 
+[2013-08-15 19:52:27] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:52:27] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:52:27] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:52:27] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:52:27] Lobby : init
+[2013-08-15 19:52:27] Lobby : add Mysys()
+[2013-08-15 19:52:44] Lobby : try connect to server!
+[2013-08-15 19:52:44] Lobby : Server Error! : 
+[2013-08-15 19:52:44] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 19:52:44] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 19:52:44] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 19:52:44] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 19:52:44] Lobby : init
+[2013-08-15 19:52:44] Lobby : add Mysys()
+[2013-08-15 19:53:15] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-15 19:53:15] Login : start game
+[2013-08-15 21:46:28] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-15 21:46:28] Login : start game
+[2013-08-15 21:46:36] Lobby : try connect to server!
+[2013-08-15 21:46:36] Lobby : Server Error! : 
+[2013-08-15 21:46:36] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:46:36] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:46:36] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:46:36] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:46:36] Lobby : init
+[2013-08-15 21:46:36] Lobby : add Mysys()
+[2013-08-15 21:46:59] Lobby : try connect to server!
+[2013-08-15 21:46:59] Lobby : Server Error! : 
+[2013-08-15 21:46:59] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:46:59] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:46:59] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:46:59] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:46:59] Lobby : init
+[2013-08-15 21:46:59] Lobby : add Mysys()
+[2013-08-15 21:47:09] Lobby : try connect to server!
+[2013-08-15 21:47:09] Lobby : Server Error! : 
+[2013-08-15 21:47:09] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:47:09] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:47:09] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:47:09] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:47:09] Lobby : init
+[2013-08-15 21:47:09] Lobby : add Mysys()
+[2013-08-15 21:47:30] Lobby : try connect to server!
+[2013-08-15 21:47:30] Lobby : Server Error! : 
+[2013-08-15 21:47:30] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:47:30] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:47:30] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:47:30] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:47:30] Lobby : init
+[2013-08-15 21:47:30] Lobby : add Mysys()
+[2013-08-15 21:47:40] Lobby : try connect to server!
+[2013-08-15 21:47:40] Lobby : Server Error! : 
+[2013-08-15 21:47:40] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:47:40] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:47:40] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:47:40] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:47:40] Lobby : init
+[2013-08-15 21:47:40] Lobby : add Mysys()
+[2013-08-15 21:48:02] Lobby : try connect to server!
+[2013-08-15 21:48:02] Lobby : Server Error! : 
+[2013-08-15 21:48:02] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:02] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:02] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:02] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:02] Lobby : init
+[2013-08-15 21:48:02] Lobby : add Mysys()
+[2013-08-15 21:48:08] Lobby : try connect to server!
+[2013-08-15 21:48:08] Lobby : Server Error! : 
+[2013-08-15 21:48:08] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:08] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:08] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:08] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:08] Lobby : init
+[2013-08-15 21:48:08] Lobby : add Mysys()
+[2013-08-15 21:48:13] Lobby : try connect to server!
+[2013-08-15 21:48:13] Lobby : Server Error! : 
+[2013-08-15 21:48:13] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:13] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:13] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:13] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:13] Lobby : init
+[2013-08-15 21:48:13] Lobby : add Mysys()
+[2013-08-15 21:48:19] Lobby : try connect to server!
+[2013-08-15 21:48:19] Lobby : Server Error! : 
+[2013-08-15 21:48:19] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:19] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:19] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:19] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:19] Lobby : init
+[2013-08-15 21:48:19] Lobby : add Mysys()
+[2013-08-15 21:48:29] Lobby : try connect to server!
+[2013-08-15 21:48:29] Lobby : Server Error! : 
+[2013-08-15 21:48:29] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:29] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:29] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:29] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:29] Lobby : init
+[2013-08-15 21:48:29] Lobby : add Mysys()
+[2013-08-15 21:48:49] Lobby : try connect to server!
+[2013-08-15 21:48:49] Lobby : Server Error! : 
+[2013-08-15 21:48:49] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:48:49] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:48:49] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:48:49] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:48:49] Lobby : init
+[2013-08-15 21:48:49] Lobby : add Mysys()
+[2013-08-15 21:49:05] Lobby : try connect to server!
+[2013-08-15 21:49:05] Lobby : Server Error! : 
+[2013-08-15 21:49:05] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:49:05] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:49:05] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:49:05] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:49:05] Lobby : init
+[2013-08-15 21:49:05] Lobby : add Mysys()
+[2013-08-15 21:49:23] Lobby : try connect to server!
+[2013-08-15 21:49:23] Lobby : Server Error! : 
+[2013-08-15 21:49:23] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:49:23] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:49:23] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:49:23] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:23] Lobby : init
+[2013-08-15 21:49:24] Lobby : init
+[2013-08-15 21:49:24] Lobby : init
+[2013-08-15 21:50:51] Lobby : try connect to server!
+[2013-08-15 21:50:51] Lobby : Server Error! : 
+[2013-08-15 21:50:51] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:50:51] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:50:51] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:50:51] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:51] Lobby : init
+[2013-08-15 21:50:52] Lobby : init
+[2013-08-15 21:50:52] Lobby : init
+[2013-08-15 21:50:52] Lobby : init
+[2013-08-15 21:51:32] Lobby : try connect to server!
+[2013-08-15 21:51:32] Lobby : Server Error! : 
+[2013-08-15 21:51:32] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:51:32] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:51:32] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:51:32] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:51:32] Lobby : init
+[2013-08-15 21:51:32] Lobby : add Mysys()
+[2013-08-15 21:51:40] Lobby : try connect to server!
+[2013-08-15 21:51:40] Lobby : Server Error! : 
+[2013-08-15 21:51:40] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 21:51:40] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 21:51:40] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 21:51:40] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 21:51:40] Lobby : init
+[2013-08-15 21:51:40] Lobby : add Mysys()
+[2013-08-15 22:17:44] Lobby : try connect to server!
+[2013-08-15 22:17:44] Lobby : Server Error! : 
+[2013-08-15 22:17:44] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 22:17:44] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 22:17:44] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 22:17:44] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 22:17:44] Lobby : init
+[2013-08-15 22:17:44] Lobby : add Mysys()
+[2013-08-15 22:17:57] Lobby : send message
+[2013-08-15 22:17:57] Lobby : Player Lost Msg : Hello
+[2013-08-15 22:17:57] Lobby : Server Error! cause:server is offline.
+[2013-08-15 22:17:59] Lobby : send message
+[2013-08-15 22:17:59] Lobby : Player Lost Msg : 
+[2013-08-15 22:17:59] Lobby : Server Error! cause:server is offline.
+[2013-08-15 22:21:36] Lobby : try connect to server!
+[2013-08-15 22:21:36] Lobby : Server Error! : 
+[2013-08-15 22:21:36] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 22:21:36] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 22:21:36] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 22:21:36] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 22:21:36] Lobby : init
+[2013-08-15 22:21:36] Lobby : add Mysys()
+[2013-08-15 22:21:48] Lobby : try connect to server!
+[2013-08-15 22:21:48] Lobby : Server Error! : 
+[2013-08-15 22:21:48] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 22:21:48] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 22:21:48] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 22:21:48] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 22:21:48] Lobby : init
+[2013-08-15 22:21:48] Lobby : add Mysys()
+[2013-08-15 22:21:57] Lobby : try connect to server!
+[2013-08-15 22:21:57] Lobby : Server Error! : 
+[2013-08-15 22:21:57] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 22:21:57] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 22:21:57] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 22:21:57] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 22:21:57] Lobby : init
+[2013-08-15 22:21:57] Lobby : add Mysys()
+[2013-08-15 22:22:07] Lobby : try connect to server!
+[2013-08-15 22:22:07] Lobby : Server Error! : 
+[2013-08-15 22:22:07] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-15 22:22:07] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-15 22:22:07] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-15 22:22:07] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-15 22:22:07] Lobby : init
+[2013-08-15 22:22:07] Lobby : add Mysys()
+[2013-08-16 10:59:22] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-16 10:59:22] Login : start game
+[2013-08-16 10:59:23] Login : login
+[2013-08-16 10:59:23] Login : cheak .sao folder
+[2013-08-16 10:59:23] Login : start write id
+[2013-08-16 10:59:23] Login : start write pass
+[2013-08-16 10:59:23] Login : go login scene
+[2013-08-16 10:59:26] Lobby : try connect to server!
+[2013-08-16 10:59:26] Lobby : Server Error! : 
+[2013-08-16 10:59:26] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-16 10:59:26] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-16 10:59:26] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-16 10:59:26] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-16 10:59:26] Lobby : init
+[2013-08-16 10:59:26] Lobby : add Mysys()
+[2013-08-16 11:00:02] Lobby : try connect to server!
+[2013-08-16 11:00:02] Lobby : Server Error! : 
+[2013-08-16 11:00:02] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-16 11:00:02] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-16 11:00:02] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-16 11:00:02] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-16 11:00:02] Lobby : init
+[2013-08-16 11:00:02] Lobby : add Mysys()
+[2013-08-16 11:01:23] Story Mode : Link start!
+[2013-08-16 11:01:23] Story Mode : Play on Story Mode.
+[2013-08-16 11:01:23] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-16 11:01:36] Story Mode : Link start!
+[2013-08-16 11:01:36] Story Mode : Play on Story Mode.
+[2013-08-16 11:01:36] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-16 11:02:04] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-16 11:02:04] Login : start game
+[2013-08-16 11:02:06] Login : login
+[2013-08-16 11:02:06] Login : cheak .sao folder
+[2013-08-16 11:02:06] Login : start write id
+[2013-08-16 11:02:06] Login : start write pass
+[2013-08-16 11:02:06] Login : go login scene
+[2013-08-16 11:02:08] Lobby : try connect to server!
+[2013-08-16 11:02:08] Lobby : Server Error! : 
+[2013-08-16 11:02:08] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-16 11:02:08] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-16 11:02:08] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-16 11:02:08] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-16 11:02:08] Lobby : init
+[2013-08-16 11:02:08] Lobby : add Mysys()
+[2013-08-16 11:02:12] Lobby : send message
+[2013-08-16 11:02:12] Lobby : Player Lost Msg : ddddd
+[2013-08-16 11:02:12] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:12] Lobby : send message
+[2013-08-16 11:02:12] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:12] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:13] Lobby : send message
+[2013-08-16 11:02:13] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:13] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:13] Lobby : send message
+[2013-08-16 11:02:13] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:13] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:13] Lobby : send message
+[2013-08-16 11:02:13] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:13] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:13] Lobby : send message
+[2013-08-16 11:02:13] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:13] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:14] Lobby : send message
+[2013-08-16 11:02:14] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:14] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:14] Lobby : send message
+[2013-08-16 11:02:14] Lobby : Player Lost Msg : 
+[2013-08-16 11:02:14] Lobby : Server Error! cause:server is offline.
+[2013-08-16 11:02:16] Lobby : _________________System ::> Server is offline!!_________________
+[2013-08-16 11:02:17] Lobby : _________________System ::> Server is offline!!_________________
+[2013-08-16 11:02:17] Lobby : _________________System ::> Server is offline!!_________________
+[2013-08-16 11:02:17] Lobby : _________________System ::> Server is offline!!_________________
+[2013-08-16 11:02:19] Lobby : _________________System ::> Server is offline!!_________________
+[2013-08-16 11:02:21] Lobby : story mode
+[2013-08-16 11:02:21] Story Mode : Link start!
+[2013-08-16 11:02:21] Story Mode : Play on Story Mode.
+[2013-08-16 11:02:21] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-16 11:03:14] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-16 11:03:14] Login : start game
+[2013-08-16 11:03:15] Login : login
+[2013-08-16 11:03:15] Login : cheak .sao folder
+[2013-08-16 11:03:15] Login : start write id
+[2013-08-16 11:03:15] Login : start write pass
+[2013-08-16 11:03:15] Login : go login scene
+[2013-08-16 11:03:17] Lobby : try connect to server!
+[2013-08-16 11:03:17] Lobby : Server Error! : 
+[2013-08-16 11:03:17] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-16 11:03:17] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-16 11:03:17] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-16 11:03:17] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-16 11:03:17] Lobby : init
+[2013-08-16 11:03:17] Lobby : add Mysys()

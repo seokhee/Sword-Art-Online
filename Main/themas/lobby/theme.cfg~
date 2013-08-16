@@ -1,0 +1,20 @@
+[Label]
+Font=myfont.ttf
+Size=24
+
+[TextBlock]
+Font=myfont.otf
+TextColor=0.0,0.0,0.0,1.0
+
+[TextInput]
+Font=myfont.ttf
+TextColor=0.0,0.0,0.0,1.0
+FrameColor=1, 1, 1, 0
+BorderSize=0
+BorderColor=0.0, 0.8, 1.0,0
+HighlightColor=1.0, 0.0, 1.0, 0.2
+InactiveFrameColor=.5, .5, .5, 0
+InactiveBorderColor=.2, .2, .2, 0
+InactiveBorderSize=0
+InactiveTextColor=.3, .3, .3, 1
+InactiveHighlightColor=0.0, 0.0, 0.0, 0.0
