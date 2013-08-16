@@ -1,10 +1,10 @@
 [Label]
-Font=myfont.ttf
+Font=sao_font.otf
 Color=0.8,0.8,0.8,1
 Size=24
 
 [Label:Large]
-Font=myfont.ttf
+Font=sao_font.otf
 Color=0.8,0.8,0.8,1
 Size=70
 
@@ -17,8 +17,7 @@ BorderSize=3
 BorderColor=0.2, 0.2, 0.2, 1.0
 
 [TextInput]
-Font=myfont.ttf
-Size=1000
+Font=sao_font.otf
 TextColor=0.0,0.0,0.0,1.0
 FrameColor=1, 1, 1, 0
 BorderSize=0

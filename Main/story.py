@@ -23,17 +23,16 @@ class MySys(bgui.System):
 	def __init__(self):
 		#init bgui
 		bgui.System.__init__(self, 'themas/story')
-		log.log('Blender Graphic User Interface is Loaded')
-
-		#clock text
-		self.lbl = bgui.Label(self, 'lblconnect', text=lctime, pt_size = 45 ,pos=[0.85,0.92],sub_theme='Large', options = bgui.BGUI_DEFAULT)
-		self.lbl.color = [0,0,0,0.5]
+		log.log('Blender Graphic User Interface is Loaded')	
+		self.clockimg = bgui.Image(self, 'image', '../GUI/GUI_clock.png', size=[0.13, 0.06], pos=[0.86, 0.92], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.clocklbl = bgui.Label(self.clockimg, 'lblconnect', text=lctime, pt_size = 45 ,pos=[0.28,0.24],sub_theme='Large', options = bgui.BGUI_DEFAULT)
+		self.clocklbl.color = [0,0,0,0.5]
 
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
 
 	def reclock(self):
-		self.lbl.text = strftime('%H:%M:%S', localtime())
+		self.clocklbl.text = strftime('%p %I:%M:%S', localtime())
 
 	def main(self):
 		"""A high-level method to be run every frame"""

@@ -19,8 +19,8 @@ import socket
 from threading import Thread
 
 nick = ''
-chat = '''_________________System ::> Connect to server_________________'''
-tmp1 = '''_________________'''
+chat = '''System > Connect to server'''
+tmp1 = ''''''
 i = 0
 host = '127.0.0.1'
 port = 10135
@@ -109,7 +109,7 @@ class MySys(bgui.System):
 		#draw connections window
 		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.68, 0.17], options=bgui.BGUI_DEFAULT)
 		self.note.colors = [[0.9,0.9,0.9,0.8]] * 4
-		self.lbl = bgui.Label(self.note, 'lblconnect', text="|-| Connections |-|",pt_size = 35, pos=[0.02,0.93], options = bgui.BGUI_DEFAULT)
+		self.lbl = bgui.Label(self.note, 'lblconnect', text="Connections",pt_size = 35, pos=[0.4,0.93], options = bgui.BGUI_DEFAULT)
 		self.lbl.color = [0,0,0,1]
 		items = [nick]+['Kirito','Kaira','Korui','YoungZaCharac','Hello','World','World of Sao','Dev','Build','df','ddd','wer','dd','Asuna']
 		i1 = len(items) - 13
@@ -129,7 +129,7 @@ class MySys(bgui.System):
 		self.foot = bgui.Frame(self.chat, 'im', size = [1, 0.06], pos = [0,0])
 		self.foot.colors=[[0.7,0.7,0.7,0.6]]*4
 		
-		self.lblchat = bgui.Label(self.head, 'lblchat', text="|-| Lobby |-|", pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
+		self.lblchat = bgui.Label(self.head, 'lblchat', text="Lobby",pt_size = 35, pos=[0.45,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblchat.color = [0,0,0,1]
 		
 		self.listc = bgui.Frame(self.chat, 'notec', border=0, size=[1, 0.87], pos=[0.0, 0.06], options=bgui.BGUI_DEFAULT)
@@ -151,18 +151,18 @@ class MySys(bgui.System):
 		self.input2.color = [0.5,0.5,0.5,0.8]
 		
 		if svrstat == 0:
-			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 35, color = [0.3,0.85,0.3,1], size = [0.98, 0.98], pos = [0.02,0])
+			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 28, color = [0.3,0.85,0.3,1], size = [0.98, 0.98], pos = [0.02,0])
 			self.chattext.text = tmp1 + 'System ::> Connect to server' + tmp1
 		elif svrstat == 1:
-			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 35, color = [1,0.6,0.2,1], size = [0.98, 0.98], pos = [0.02,0])
+			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 28, color = [1,0.6,0.2,1], size = [0.98, 0.98], pos = [0.02,0])
 
 		#creat next button
-		self.button = bgui.FrameButton(self, 'button', text='|| Join\n\n|| Server',pt_size = 40, size=[0.14, 0.13], pos=[0.845, 0.022],options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'button', text='Join Server',pt_size = 50, size=[0.14, 0.13], pos=[0.845, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.multi
 		self.button.on_hover = self.hover_sound
 		self.button.on_mouse_exit = self.setting
 		
-		self.button = bgui.FrameButton(self, 'button1', text='|| Story\n\n|| Mode',pt_size = 40, size=[0.14, 0.13], pos=[0.68, 0.022],options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'button1', text='Story Mode',pt_size = 50, size=[0.14, 0.13], pos=[0.68, 0.022],options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.story
 		self.button.on_hover = self.hover_sound
 		self.button.on_mouse_exit = self.setting
@@ -174,10 +174,10 @@ class MySys(bgui.System):
 		file1.close()
 		
 		self.note2 = bgui.Frame(self, 'note2', border=0, size=[0.305, 0.1], pos=[0.68, 0.9], options=bgui.BGUI_DEFAULT)
-		self.note2.colors = [[0.9,0.75,0.4,0.8]] * 4
+		self.note2.colors = [[1,1,1,0.9]] * 4
 		
-		self.lbl2 = bgui.Label(self, 'lab2', text="Hello, "+str(data[0])+".",pt_size = 55, pos=[0.7015,0.927], options = bgui.BGUI_DEFAULT)
-		self.lbl2.color = [0.1,0.1,0.1,0.6]
+		self.lbl2 = bgui.Label(self, 'lab2', text="Hello, "+str(data[0])+".",pt_size = 55, pos=[0.701,0.928], options = bgui.BGUI_DEFAULT)
+		self.lbl2.color = [0,0,0,1]
 		
 		self.lbl1 = bgui.Label(self, 'labl', text="Hello, "+str(data[0])+".",pt_size = 55, pos=[0.7,0.93], options = bgui.BGUI_DEFAULT)
 		self.lbl1.color = [1,1,1,1]

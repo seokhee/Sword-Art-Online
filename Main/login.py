@@ -96,7 +96,7 @@ class MySys(bgui.System):
 		log.log('start game')
 		
 		#button create
-		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='L o g i n !',pt_size = 35, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
+		self.button = bgui.FrameButton(self, 'btn', base_color = [0.1,0.1,0.1,0.9], text='Link Start!',pt_size = 35, size=[0.11, 0.06], pos=[0.665, 0.21], options = bgui.BGUI_DEFAULT)
 		self.button.on_click = self.login
 		self.button.on_hover = self.hover_sound
 		self.button.on_mouse_exit = self.setting

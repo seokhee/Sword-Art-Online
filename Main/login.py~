@@ -16,7 +16,7 @@ import os
 import log
 from bge import logic
 
-print(os.getcwd())
+log.log(''+os.getcwd())
 
 identity = 'ID'
 password = 'Password'
