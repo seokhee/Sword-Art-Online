@@ -1,9 +1,9 @@
 [Label]
-Font=sao_font.otf
+Font=sao_font.ttf
 Size=24
 
 [TextBlock]
-Font=sao_font.otf
+Font=sao_font.ttf
 
 [TextInput]
 Font=sao_font.ttf
