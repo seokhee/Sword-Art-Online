@@ -20,6 +20,7 @@ log.log('Play on Story Mode.')
 lctime = strftime('%H:%M:%S', localtime())
 is_Menu_Open = False
 menu_Status = 5
+iss = 1
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -82,6 +83,23 @@ class MySys(bgui.System):
 			elif menu_Status == 5:
 				self.sub_menu.position = [0.7, -0.9]
 	
+	def hover_sound():
+		global iss ######!!! IMPORTANT !!!  Make sure
+		if iss == 1:
+			iss = 0
+			cont = bge.logic.getCurrentController()
+			act = cont.actuators['sound_hover']
+			act.startSound()
+	
+	def hover_sound_on(self):
+		global iss
+		iss = 1
+	
+	def start_sound(self, actuators):
+		cont = bge.logic.getCurrentController()
+		act = cont.actuators[actuators]
+		act.startSound()
+	
 	def main(self):
 		"""A high-level method to be run every frame"""
 
@@ -140,21 +158,25 @@ def main(cont):
 			log.log('Open Menu')
 			is_Menu_Open = True
 			mouse.visible = True
+			own['sys'].start_sound('window_open')
 		
 		elif is_Menu_Open == True:
 			own['sys'].closeMenu()
 			log.log('Close Menu')
 			mouse.visible = False
 			is_Menu_Open = False
+			own['sys'].start_sound('window_close')
 	
 	if mouse.events[bge.events.WHEELUPMOUSE] == JUST_ACTIVATED:
 		if menu_Status > 1:
 			menu_Status = menu_Status - 1
 			own['sys'].moveMenu()
+			own['sys'].start_sound('sound_move')
 	
 	elif mouse.events[bge.events.WHEELDOWNMOUSE] == JUST_ACTIVATED:
 		if menu_Status < 5:
 			menu_Status = menu_Status + 1
 			own['sys'].moveMenu()
+			own['sys'].start_sound('sound_move')
 	
 os.chdir(bge.logic.expandPath('//'))
