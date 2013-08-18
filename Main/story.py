@@ -19,6 +19,7 @@ log.log('Link start!')
 log.log('Play on Story Mode.')
 lctime = strftime('%H:%M:%S', localtime())
 is_Menu_Open = False
+menu_Status = 5
 
 class MySys(bgui.System):
 	def __init__(self):
@@ -39,8 +40,8 @@ class MySys(bgui.System):
 		self.main_menu.colors = [[0.5,0,0,0.5]] * 4
 		
 		# Show Sub Menu
-		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, 0.3]) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
-		self.sub_menu.colors = [[0,0,0.5,0.5]] * 4
+		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, -0.9]) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
+		self.sub_menu.colors = [[0.5,0,0.5,0.5]] * 4
 		
 		# Show Sub Menu Menu
 		self.sub_menu_1 = bgui.Frame(self.sub_menu, 'sub_menu_1', border=0, size=[1,0.2], pos=[0, 0])
@@ -65,7 +66,27 @@ class MySys(bgui.System):
 	
 	def closeMenu(self):
 		self.main_frame.move([-1, 0.15],300)
-		
+	
+	def moveMenu(self):
+		global menu_Status
+		global is_Menu_Open
+		if is_Menu_Open == True:
+			if menu_Status == 1:
+				self.sub_menu.position = [0.7, 0.3]
+				print(1)
+			elif menu_Status == 2:
+				self.sub_menu.position = [0.7, 0]
+				print(2)
+			elif menu_Status == 3:
+				self.sub_menu.position = [0.7, -0.3]
+				print(3)
+			elif menu_Status == 4:
+				self.sub_menu.position = [0.7, -0.6]
+				print(4)
+			elif menu_Status == 5:
+				self.sub_menu.position = [0.7, -0.9]
+				print(5)
+	
 	def main(self):
 		"""A high-level method to be run every frame"""
 
@@ -104,6 +125,7 @@ class MySys(bgui.System):
 
 def main(cont):
 	global is_Menu_Open
+	global menu_Status
 	own = cont.owner	
 	co = bge.logic.getCurrentController()
 	# 'Keyboard' is a keyboard sensor
@@ -123,9 +145,23 @@ def main(cont):
 			log.log('Open Menu')
 			is_Menu_Open = True
 			mouse.visible = True
+		
 		elif is_Menu_Open == True:
 			own['sys'].closeMenu()
 			log.log('Close Menu')
 			mouse.visible = False
 			is_Menu_Open = False
+	
+	if mouse.events[bge.events.WHEELUPMOUSE] == JUST_ACTIVATED:
+		if menu_Status > 1:
+			menu_Status = menu_Status - 1
+			own['sys'].moveMenu()
+			print(menu_Status)
+	
+	elif mouse.events[bge.events.WHEELDOWNMOUSE] == JUST_ACTIVATED:
+		if menu_Status < 5:
+			menu_Status = menu_Status + 1
+			own['sys'].moveMenu()
+			print(menu_Status)
+	
 os.chdir(bge.logic.expandPath('//'))
