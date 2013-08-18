@@ -73,19 +73,14 @@ class MySys(bgui.System):
 		if is_Menu_Open == True:
 			if menu_Status == 1:
 				self.sub_menu.position = [0.7, 0.3]
-				print(1)
 			elif menu_Status == 2:
 				self.sub_menu.position = [0.7, 0]
-				print(2)
 			elif menu_Status == 3:
 				self.sub_menu.position = [0.7, -0.3]
-				print(3)
 			elif menu_Status == 4:
 				self.sub_menu.position = [0.7, -0.6]
-				print(4)
 			elif menu_Status == 5:
 				self.sub_menu.position = [0.7, -0.9]
-				print(5)
 	
 	def main(self):
 		"""A high-level method to be run every frame"""
@@ -156,12 +151,10 @@ def main(cont):
 		if menu_Status > 1:
 			menu_Status = menu_Status - 1
 			own['sys'].moveMenu()
-			print(menu_Status)
 	
 	elif mouse.events[bge.events.WHEELDOWNMOUSE] == JUST_ACTIVATED:
 		if menu_Status < 5:
 			menu_Status = menu_Status + 1
 			own['sys'].moveMenu()
-			print(menu_Status)
 	
 os.chdir(bge.logic.expandPath('//'))
