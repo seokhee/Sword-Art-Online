@@ -35,26 +35,21 @@ class MySys(bgui.System):
 		
 		# Show Main Menu
 		self.main_frame = bgui.Frame(self, 'main_frame', border=0, size=[0.4,0.8], pos=[-1, 0.15]) # This Menu GoTo 0.3
-		self.main_frame.colors = [[0,0,0,0.1]] * 4
+		self.main_frame.colors = [[0,0,0,0]] * 4
 		
-		self.main_menu = bgui.Frame(self.main_frame, 'main_menu', border=0, size=[0.7,1], pos=[0, 0])
-		self.main_menu.colors = [[0.5,0,0,0.5]] * 4
+		self.main_menu = bgui.Image(self.main_frame, 'main_menu', '../GUI/GUI_Main_Manu.png', size=[0.7,1], pos=[0, 0])
+		self.main_menu.colors = [[0.9,0.9,0.9,0.5]] * 4
 		
 		# Show Sub Menu
-		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, -0.9]) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
-		self.sub_menu.colors = [[0.5,0,0.5,0.5]] * 4
+		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, -0.9], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
+		self.sub_menu.colors = [[0.5,0,0.5,0]] * 4
 		
 		# Show Sub Menu Menu
-		self.sub_menu_1 = bgui.Frame(self.sub_menu, 'sub_menu_1', border=0, size=[1,0.2], pos=[0, 0])
-		self.sub_menu_1.colors = [[0.3,0.5,0,0.5]] * 4
-		self.sub_menu_2 = bgui.Frame(self.sub_menu, 'sub_menu_2', border=0, size=[1,0.2], pos=[0, 0.2])
-		self.sub_menu_2.colors = [[0,0.5,0.5,0.5]] * 4
-		self.sub_menu_3 = bgui.Frame(self.sub_menu, 'sub_menu_3', border=0, size=[1,0.2], pos=[0, 0.4])
-		self.sub_menu_3.colors = [[0.9,0,0,0.5]] * 4
-		self.sub_menu_4 = bgui.Frame(self.sub_menu, 'sub_menu_4', border=0, size=[1,0.2], pos=[0, 0.6])
-		self.sub_menu_4.colors = [[0,0,0.2,0.5]] * 4
-		self.sub_menu_5 = bgui.Frame(self.sub_menu, 'sub_menu_5', border=0, size=[1,0.2], pos=[0, 0.8])
-		self.sub_menu_5.colors = [[0,0.8,0,0.5]] * 4
+		self.sub_menu_1 = bgui.Image(self.sub_menu, 'sub_menu_1', '../GUI/Button_Empty.png', size=[1,0.2], pos=[0, 0], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.sub_menu_2 = bgui.Image(self.sub_menu, 'sub_menu_2', '../GUI/Button_Empty.png', size=[1,0.2], pos=[0, 0.2], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.sub_menu_3 = bgui.Image(self.sub_menu, 'sub_menu_3', '../GUI/Button_Empty.png', size=[1,0.2], pos=[0, 0.4], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.sub_menu_4 = bgui.Image(self.sub_menu, 'sub_menu_4', '../GUI/Button_Empty.png', size=[1,0.2], pos=[0, 0.6], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.sub_menu_5 = bgui.Image(self.sub_menu, 'sub_menu_5', '../GUI/Button_Empty.png', size=[1,0.2], pos=[0, 0.8], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
 		
 		# Create Key Map
 		self.keymap = {getattr(bge.events, val): getattr(bgui, val) for val in dir(bge.events) if val.endswith('KEY') or val.startswith('PAD')}
@@ -70,18 +65,16 @@ class MySys(bgui.System):
 	
 	def moveMenu(self):
 		global menu_Status
-		global is_Menu_Open
-		if is_Menu_Open == True:
-			if menu_Status == 1:
-				self.sub_menu.position = [0.7, 0.3]
-			elif menu_Status == 2:
-				self.sub_menu.position = [0.7, 0]
-			elif menu_Status == 3:
-				self.sub_menu.position = [0.7, -0.3]
-			elif menu_Status == 4:
-				self.sub_menu.position = [0.7, -0.6]
-			elif menu_Status == 5:
-				self.sub_menu.position = [0.7, -0.9]
+		if menu_Status == 1:
+			self.sub_menu.position = [0.7, 0.3]
+		elif menu_Status == 2:
+			self.sub_menu.position = [0.7, 0]
+		elif menu_Status == 3:
+			self.sub_menu.position = [0.7, -0.3]
+		elif menu_Status == 4:
+			self.sub_menu.position = [0.7, -0.6]
+		elif menu_Status == 5:
+			self.sub_menu.position = [0.7, -0.9]
 	
 	def hover_sound():
 		global iss ######!!! IMPORTANT !!!  Make sure
@@ -154,6 +147,8 @@ def main(cont):
 	
 	if keyboard.events[bge.events.EKEY] == JUST_ACTIVATED:
 		if is_Menu_Open == False:
+			menu_Status = 5
+			own['sys'].moveMenu()
 			own['sys'].openMenu()
 			log.log('Open Menu')
 			is_Menu_Open = True
@@ -166,17 +161,17 @@ def main(cont):
 			mouse.visible = False
 			is_Menu_Open = False
 			own['sys'].start_sound('window_close')
-	
-	if mouse.events[bge.events.WHEELUPMOUSE] == JUST_ACTIVATED:
-		if menu_Status > 1:
-			menu_Status = menu_Status - 1
-			own['sys'].moveMenu()
-			own['sys'].start_sound('sound_move')
-	
-	elif mouse.events[bge.events.WHEELDOWNMOUSE] == JUST_ACTIVATED:
-		if menu_Status < 5:
-			menu_Status = menu_Status + 1
-			own['sys'].moveMenu()
-			own['sys'].start_sound('sound_move')
+	if is_Menu_Open == True:
+		if mouse.events[bge.events.WHEELUPMOUSE] == JUST_ACTIVATED:
+			if menu_Status > 1:
+				menu_Status = menu_Status - 1
+				own['sys'].moveMenu()
+				own['sys'].start_sound('sound_move')
+		
+		elif mouse.events[bge.events.WHEELDOWNMOUSE] == JUST_ACTIVATED:
+			if menu_Status < 5:
+				menu_Status = menu_Status + 1
+				own['sys'].moveMenu()
+				own['sys'].start_sound('sound_move')
 	
 os.chdir(bge.logic.expandPath('//'))
