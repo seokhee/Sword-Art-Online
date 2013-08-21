@@ -37,11 +37,11 @@ class MySys(bgui.System):
 		self.main_frame = bgui.Frame(self, 'main_frame', border=0, size=[0.4,0.8], pos=[-1, 0.15]) # This Menu GoTo 0.3
 		self.main_frame.colors = [[0,0,0,0]] * 4
 		
-		self.main_menu = bgui.Image(self.main_frame, 'main_menu', '../GUI/GUI_Main_Menu.png', size=[0.7,1], pos=[0, 0])
+		self.main_menu = bgui.Image(self.main_frame, 'main_menu', '../GUI/GUI_Main_Manu.png', size=[0.8,1.1], pos=[-0.1, -0.1])
 		self.main_menu.colors = [[0.9,0.9,0.9,0.5]] * 4
 		
 		# Show Sub Menu
-		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, -0.9], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
+		self.sub_menu = bgui.Frame(self.main_frame, 'sub_menu', border=0, size=[0.3,1.5], pos=[0.7, -0.95], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE) # 1:-0.9 2:-0.6  3:-0.3  4:0  5:0.3
 		self.sub_menu.colors = [[0.5,0,0.5,0]] * 4
 		
 		# Show Sub Menu Menu
@@ -74,7 +74,7 @@ class MySys(bgui.System):
 		elif menu_Status == 4:
 			self.sub_menu.position = [0.7, -0.6]
 		elif menu_Status == 5:
-			self.sub_menu.position = [0.7, -0.9]
+			self.sub_menu.position = [0.7, -0.95]
 	
 	def hover_sound():
 		global iss ######!!! IMPORTANT !!!  Make sure

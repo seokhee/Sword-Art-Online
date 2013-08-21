@@ -2439,3 +2439,231 @@
 [2013-08-18 20:16:18] Story Mode : Play on Story Mode.
 [2013-08-18 20:16:18] Story Mode : Blender Graphic User Interface is Loaded
 [2013-08-18 20:16:19] Story Mode : Open Menu
+[2013-08-18 21:46:37] Story Mode : Link start!
+[2013-08-18 21:46:37] Story Mode : Play on Story Mode.
+[2013-08-18 21:46:37] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-18 21:46:39] Story Mode : Open Menu
+[2013-08-18 21:46:43] Story Mode : Close Menu
+[2013-08-18 21:48:43] /home/leeheejun/projects/Sword-Art-Online/Main
+[2013-08-18 21:48:43] Login : start game
+[2013-08-18 21:48:46] Login : login
+[2013-08-18 21:48:46] Login : cheak .sao folder
+[2013-08-18 21:48:46] Login : start write id
+[2013-08-18 21:48:46] Login : start write pass
+[2013-08-18 21:48:46] Login : go login scene
+[2013-08-18 21:48:49] Lobby : try connect to server!
+[2013-08-18 21:48:49] Lobby : Server Error! : 
+[2013-08-18 21:48:49] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-18 21:48:49] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-18 21:48:49] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-18 21:48:49] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-18 21:48:49] Lobby : init
+[2013-08-18 21:48:49] Lobby : add Mysys()
+[2013-08-18 21:48:53] Lobby : send message
+[2013-08-18 21:48:53] Lobby : Player Lost Msg : dddddd
+[2013-08-18 21:48:53] Lobby : Server Error! cause:server is offline.
+[2013-08-18 21:48:53] Lobby : send message
+[2013-08-18 21:48:53] Lobby : Player Lost Msg : 
+[2013-08-18 21:48:53] Lobby : Server Error! cause:server is offline.
+[2013-08-18 21:48:53] Lobby : send message
+[2013-08-18 21:48:53] Lobby : Player Lost Msg : 
+[2013-08-18 21:48:53] Lobby : Server Error! cause:server is offline.
+[2013-08-18 21:48:53] Lobby : send message
+[2013-08-18 21:48:53] Lobby : Player Lost Msg : 
+[2013-08-18 21:48:53] Lobby : Server Error! cause:server is offline.
+[2013-08-18 21:48:56] Lobby : story mode
+[2013-08-18 21:48:56] Story Mode : Link start!
+[2013-08-18 21:48:56] Story Mode : Play on Story Mode.
+[2013-08-18 21:48:56] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-18 21:48:59] Story Mode : Open Menu
+[2013-08-18 21:49:03] Story Mode : Close Menu
+[2013-08-21 20:56:24] Story Mode : Link start!
+[2013-08-21 20:56:24] Story Mode : Play on Story Mode.
+[2013-08-21 20:56:24] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 20:56:26] Story Mode : Open Menu
+[2013-08-21 20:56:43] Story Mode : Close Menu
+[2013-08-21 20:56:44] Story Mode : Open Menu
+[2013-08-21 20:56:45] Story Mode : Close Menu
+[2013-08-21 20:56:45] Story Mode : Open Menu
+[2013-08-21 20:56:47] Story Mode : Close Menu
+[2013-08-21 20:58:23] Story Mode : Link start!
+[2013-08-21 20:58:23] Story Mode : Play on Story Mode.
+[2013-08-21 20:58:23] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 20:58:24] Story Mode : Open Menu
+[2013-08-21 20:58:48] Story Mode : Link start!
+[2013-08-21 20:58:48] Story Mode : Play on Story Mode.
+[2013-08-21 20:58:48] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 20:58:49] Story Mode : Open Menu
+[2013-08-21 21:07:32] Story Mode : Link start!
+[2013-08-21 21:07:32] Story Mode : Play on Story Mode.
+[2013-08-21 21:07:32] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:07:33] Story Mode : Open Menu
+[2013-08-21 21:07:38] Story Mode : Close Menu
+[2013-08-21 21:07:43] Story Mode : Link start!
+[2013-08-21 21:07:43] Story Mode : Play on Story Mode.
+[2013-08-21 21:07:43] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:07:44] Story Mode : Open Menu
+[2013-08-21 21:08:25] Story Mode : Link start!
+[2013-08-21 21:08:25] Story Mode : Play on Story Mode.
+[2013-08-21 21:08:25] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:08:26] Story Mode : Open Menu
+[2013-08-21 21:12:42] Story Mode : Link start!
+[2013-08-21 21:12:42] Story Mode : Play on Story Mode.
+[2013-08-21 21:12:42] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:12:43] Story Mode : Open Menu
+[2013-08-21 21:13:50] Story Mode : Link start!
+[2013-08-21 21:13:50] Story Mode : Play on Story Mode.
+[2013-08-21 21:13:50] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:13:51] Story Mode : Open Menu
+[2013-08-21 21:14:19] Story Mode : Link start!
+[2013-08-21 21:14:19] Story Mode : Play on Story Mode.
+[2013-08-21 21:14:19] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:14:20] Story Mode : Open Menu
+[2013-08-21 21:15:10] Story Mode : Link start!
+[2013-08-21 21:15:10] Story Mode : Play on Story Mode.
+[2013-08-21 21:15:10] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:15:11] Story Mode : Open Menu
+[2013-08-21 21:15:20] Story Mode : Link start!
+[2013-08-21 21:15:20] Story Mode : Play on Story Mode.
+[2013-08-21 21:15:20] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:15:20] Story Mode : Open Menu
+[2013-08-21 21:15:41] Story Mode : Link start!
+[2013-08-21 21:15:41] Story Mode : Play on Story Mode.
+[2013-08-21 21:15:41] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:15:42] Story Mode : Open Menu
+[2013-08-21 21:15:51] Story Mode : Link start!
+[2013-08-21 21:15:51] Story Mode : Play on Story Mode.
+[2013-08-21 21:15:51] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:15:52] Story Mode : Open Menu
+[2013-08-21 21:16:20] Story Mode : Link start!
+[2013-08-21 21:16:20] Story Mode : Play on Story Mode.
+[2013-08-21 21:16:20] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:16:20] Story Mode : Open Menu
+[2013-08-21 21:16:41] Story Mode : Link start!
+[2013-08-21 21:16:41] Story Mode : Play on Story Mode.
+[2013-08-21 21:16:41] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:16:42] Story Mode : Open Menu
+[2013-08-21 21:17:27] Story Mode : Link start!
+[2013-08-21 21:17:27] Story Mode : Play on Story Mode.
+[2013-08-21 21:17:27] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:17:28] Story Mode : Open Menu
+[2013-08-21 21:18:53] Story Mode : Link start!
+[2013-08-21 21:18:53] Story Mode : Play on Story Mode.
+[2013-08-21 21:18:53] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:18:53] Story Mode : Open Menu
+[2013-08-21 21:19:08] Story Mode : Link start!
+[2013-08-21 21:19:08] Story Mode : Play on Story Mode.
+[2013-08-21 21:19:08] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:19:09] Story Mode : Open Menu
+[2013-08-21 21:19:14] Story Mode : Link start!
+[2013-08-21 21:19:14] Story Mode : Play on Story Mode.
+[2013-08-21 21:19:14] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:19:14] Story Mode : Open Menu
+[2013-08-21 21:19:31] Story Mode : Link start!
+[2013-08-21 21:19:31] Story Mode : Play on Story Mode.
+[2013-08-21 21:19:31] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:19:33] Story Mode : Open Menu
+[2013-08-21 21:19:36] Story Mode : Link start!
+[2013-08-21 21:19:36] Story Mode : Play on Story Mode.
+[2013-08-21 21:19:36] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:19:37] Story Mode : Open Menu
+[2013-08-21 21:20:02] Story Mode : Link start!
+[2013-08-21 21:20:02] Story Mode : Play on Story Mode.
+[2013-08-21 21:20:02] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:20:03] Story Mode : Open Menu
+[2013-08-21 21:20:27] Story Mode : Link start!
+[2013-08-21 21:20:27] Story Mode : Play on Story Mode.
+[2013-08-21 21:20:27] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:20:28] Story Mode : Open Menu
+[2013-08-21 21:20:56] Story Mode : Link start!
+[2013-08-21 21:20:56] Story Mode : Play on Story Mode.
+[2013-08-21 21:20:56] Story Mode : Blender Graphic User Interface is Loaded
+[2013-08-21 21:20:56] Story Mode : Open Menu
+[2013-08-21 21:21:46] Lobby : try connect to server!
+[2013-08-21 21:21:47] Lobby : Server Error! : 
+[2013-08-21 21:21:47] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:21:47] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:21:47] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:21:47] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:21:47] Lobby : init
+[2013-08-21 21:21:47] Lobby : add Mysys()
+[2013-08-21 21:24:25] Lobby : try connect to server!
+[2013-08-21 21:24:25] Lobby : Server Error! : 
+[2013-08-21 21:24:25] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:24:25] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:24:25] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:24:25] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:24:25] Lobby : init
+[2013-08-21 21:24:25] Lobby : add Mysys()
+[2013-08-21 21:25:31] Lobby : try connect to server!
+[2013-08-21 21:25:31] Lobby : Server Error! : 
+[2013-08-21 21:25:31] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:25:31] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:25:31] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:25:31] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:25:31] Lobby : init
+[2013-08-21 21:25:31] Lobby : add Mysys()
+[2013-08-21 21:26:07] Lobby : try connect to server!
+[2013-08-21 21:26:07] Lobby : Server Error! : 
+[2013-08-21 21:26:07] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:26:07] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:26:07] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:26:07] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:26:07] Lobby : init
+[2013-08-21 21:26:07] Lobby : add Mysys()
+[2013-08-21 21:27:03] Lobby : try connect to server!
+[2013-08-21 21:27:03] Lobby : Server Error! : 
+[2013-08-21 21:27:03] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:27:03] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:27:03] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:27:03] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:27:03] Lobby : init
+[2013-08-21 21:27:03] Lobby : add Mysys()
+[2013-08-21 21:27:48] Lobby : try connect to server!
+[2013-08-21 21:27:48] Lobby : Server Error! : 
+[2013-08-21 21:27:48] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:27:48] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:27:48] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:27:48] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:27:48] Lobby : init
+[2013-08-21 21:27:48] Lobby : add Mysys()
+[2013-08-21 21:28:48] Lobby : try connect to server!
+[2013-08-21 21:28:48] Lobby : Server Error! : 
+[2013-08-21 21:28:48] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:28:48] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:28:48] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:28:48] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:28:48] Lobby : init
+[2013-08-21 21:28:48] Lobby : add Mysys()
+[2013-08-21 21:29:53] Lobby : try connect to server!
+[2013-08-21 21:29:53] Lobby : Server Error! : 
+[2013-08-21 21:29:53] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:29:53] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:29:53] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:29:53] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:29:53] Lobby : init
+[2013-08-21 21:29:53] Lobby : add Mysys()
+[2013-08-21 21:30:21] Lobby : try connect to server!
+[2013-08-21 21:30:21] Lobby : Server Error! : 
+[2013-08-21 21:30:21] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:30:21] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:30:21] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:30:21] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:30:21] Lobby : init
+[2013-08-21 21:30:21] Lobby : add Mysys()
+[2013-08-21 21:30:49] Lobby : try connect to server!
+[2013-08-21 21:30:49] Lobby : Server Error! : 
+[2013-08-21 21:30:49] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:30:49] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:30:49] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:30:49] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:30:49] Lobby : init
+[2013-08-21 21:30:49] Lobby : add Mysys()
+[2013-08-21 21:31:12] Lobby : try connect to server!
+[2013-08-21 21:31:12] Lobby : Server Error! : 
+[2013-08-21 21:31:12] Lobby : 	- Detail : Server 127.0.0.1:10135 is now offline!
+[2013-08-21 21:31:12] Lobby : 	- How to fix this problem? Way1 : Edit line 24, 25 in lobby.py.
+[2013-08-21 21:31:12] Lobby : 	- How to fix this problem? Way2 : Start Server yourself.
+[2013-08-21 21:31:12] Lobby : 	- How to fix this problem? Way3 : Talk to Server Manager.
+[2013-08-21 21:31:12] Lobby : init
+[2013-08-21 21:31:12] Lobby : add Mysys()

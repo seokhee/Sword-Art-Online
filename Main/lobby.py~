@@ -27,6 +27,9 @@ port = 10135
 svrstat = 0
 ishvrsnd = True
 log.log_prefix = 'Lobby : '
+winfoot = '../GUI/window-foot.png'
+winhead = '../GUI/window-head.png'
+winbody = '../GUI/window-body.png'
 
 try:
 	log.log('try connect to server!')
@@ -36,7 +39,7 @@ try:
 	nick = nickf.read()
 	clis.sendall(bytes(nick, 'utf-8'))
 except:
-	chat = tmp1 + 'System ::> Server Error!' + tmp1 + '''
+	chat = tmp1 + 'System > Server Error!' + tmp1 + '''
 	
 	-Server is offline! You can play only Story mode'''
 	log.log('Server Error! : ')
@@ -48,6 +51,7 @@ except:
 
 class MySys(bgui.System):
 	def __init__(self):
+		global winfoot, winbody, winhead
 		'''
 		Menual
 		
@@ -108,7 +112,7 @@ class MySys(bgui.System):
 		
 		#draw connections window
 		self.note = bgui.Frame(self, 'note', border=0, size=[0.305, 0.7], pos=[0.68, 0.17], options=bgui.BGUI_DEFAULT)
-		self.note.colors = [[0.9,0.9,0.9,0.8]] * 4
+		self.note.colors = [[0.9,0.9,0.9,0.0]] * 4
 		self.lbl = bgui.Label(self.note, 'lblconnect', text="Connections",pt_size = 35, pos=[0.4,0.93], options = bgui.BGUI_DEFAULT)
 		self.lbl.color = [0,0,0,1]
 		items = [nick]+['Kirito','Kaira','Korui','YoungZaCharac','Hello','World','World of Sao','Dev','Build','df','ddd','wer','dd','Asuna']
@@ -117,27 +121,22 @@ class MySys(bgui.System):
 			i1 = 'no more'
 		item = items[0:12] + ['... And '+str(i1)+' players.']
 		self.listf = bgui.Frame(self.note, 'notef', border=0, size=[1, 0.85], pos=[0, 0.05], options=bgui.BGUI_DEFAULT)
-		self.listf.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
+		self.listf.colors = [[0.5, 0.5, 0.5, 0.0]] * 4
 		
 		self.lb = bgui.ListBox(self.listf, "lb", items=item, padding=0.05, size=[0.9, 0.9], pos=[0.05, 0.07])
 		
 		#draw chat window
 		self.chat = bgui.Frame(self, 'chat', border=0, size=[0.66, 0.96], pos=[0.01, 0.02], options=bgui.BGUI_DEFAULT)
-		self.chat.colors = [[0.9, 0.9, 0.9, 0.8]] * 4
+		self.chat.colors = [[0.9, 0.9, 0.9, 0.0]] * 4
 		
-		self.head = bgui.Frame(self.chat, 'img', size = [1,0.07], pos = [0,0.93])
-		self.foot = bgui.Frame(self.chat, 'im', size = [1, 0.06], pos = [0,0])
-		self.foot.colors=[[0.7,0.7,0.7,0.6]]*4
+		self.head = bgui.Image(self.chat, 'img', winhead, size = [1,0.07], pos = [0,0.93], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.foot = bgui.Image(self.chat, 'im', winfoot, size = [1, 0.06], pos = [0,0],  options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
+		self.foot.colors=[[0.7,0.7,0.7,0.0]]*4
 		
 		self.lblchat = bgui.Label(self.head, 'lblchat', text="Lobby",pt_size = 35, pos=[0.45,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblchat.color = [0,0,0,1]
 		
-		self.listc = bgui.Frame(self.chat, 'notec', border=0, size=[1, 0.87], pos=[0.0, 0.06], options=bgui.BGUI_DEFAULT)
-		self.listc.colors = [[0.5, 0.5, 0.5, 0.6]] * 4
-		
-		self.temps = bgui.Frame(self.foot, 'dd', border=0, size=[0.95,0.85], pos=[0.02, 0.1])
-		self.listc.colors = [[0.5,0.5,0.5,0.6]] * 4
-		
+		self.listc = bgui.Frame(self.chat, 'notec', winbody, size=[1, 0.87], pos=[0.0, 0.06], options = bgui.BGUI_DEFAULT|bgui.BGUI_CACHE)
 		self.buttons = bgui.FrameButton(self.foot, 'buttons', text='Send',pt_size = 30, size=[0.085, 0.8], pos=[0.91, 0.1],options = bgui.BGUI_DEFAULT)
 		self.buttons.on_click = self.sendmessage
 		self.buttons.on_hover = self.hover_sound
@@ -146,13 +145,13 @@ class MySys(bgui.System):
 		self.lblat = bgui.Label(self.foot, 'lblat', text=">",pt_size = 30, pos=[0.01,0.3], options = bgui.BGUI_DEFAULT)
 		self.lblat.color = [0.5,0.5,0.5,0.8]
 		
-		self.input2 = bgui.TextInput(self.foot, 'input2', "",pt_size = 35, size=[1, 0.95], pos=[0.03, 0.01],
+		self.input2 = bgui.TextInput(self.foot, 'input2', "",pt_size = 35, size=[1, 0.95], pos=[0.02, 0.01],
 			input_options = bgui.BGUI_INPUT_SELECT_ALL, options = bgui.BGUI_DEFAULT)
 		self.input2.color = [0.5,0.5,0.5,0.8]
 		
 		if svrstat == 0:
 			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 28, color = [0.3,0.85,0.3,1], size = [0.98, 0.98], pos = [0.02,0])
-			self.chattext.text = tmp1 + 'System ::> Connect to server' + tmp1
+			self.chattext.text = tmp1 + 'System > Connect to server' + tmp1
 		elif svrstat == 1:
 			self.chattext = bgui.TextBlock(self.listc, 'chatting',text = chat, pt_size = 28, color = [1,0.6,0.2,1], size = [0.98, 0.98], pos = [0.02,0])
 
@@ -174,7 +173,7 @@ class MySys(bgui.System):
 		file1.close()
 		
 		self.note2 = bgui.Frame(self, 'note2', border=0, size=[0.305, 0.1], pos=[0.68, 0.9], options=bgui.BGUI_DEFAULT)
-		self.note2.colors = [[1,1,1,0.9]] * 4
+		self.note2.colors = [[1,1,1,0.0]] * 4
 		
 		self.lbl2 = bgui.Label(self, 'lab2', text="Hello, "+str(data[0])+".",pt_size = 55, pos=[0.701,0.928], options = bgui.BGUI_DEFAULT)
 		self.lbl2.color = [0,0,0,1]
@@ -191,7 +190,7 @@ class MySys(bgui.System):
 			scene.replace('multi')
 			bge.logic.mouse.visible = False
 		if svrstat == 1:
-			chat = tmp1 + 'System ::> Server is offline!!' + tmp1
+			chat = tmp1 + 'System > Server is offline!!' + tmp1
 			self.chattext.text = chat
 			log.log(chat)
 			cont = bge.logic.getCurrentController()
@@ -233,7 +232,7 @@ class MySys(bgui.System):
 		elif svrstat == 1:
 			log.log('Player Lost Msg : ' + self.input2.text)
 			self.input2.text = ''
-			self.chattext.text = tmp1 + 'System ::> Server is offline!' + tmp1
+			self.chattext.text = tmp1 + 'System > Server is offline!' + tmp1
 			log.log('Server Error! cause:server is offline.')
 			self.clk_sound()
 			
